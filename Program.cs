@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using LTWin_Last.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace LTWin_Last
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Customer());
+            Application.Run(new BookingTicket());
         }
     }
 }

@@ -32,7 +32,7 @@ namespace LTWin_Last.View
         }
         private void AddFilm_Load(object sender, EventArgs e)
         {
-
+            lb_time.Text = DateTime.Now.ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -42,9 +42,59 @@ namespace LTWin_Last.View
             {
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    ptbAnh.Image = Image.FromFile(ofd.FileName);
+                    ptb_Anh.Image = Image.FromFile(ofd.FileName);
                 }
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lb_time.Text = DateTime.Now.ToString();
         }
     }
 }

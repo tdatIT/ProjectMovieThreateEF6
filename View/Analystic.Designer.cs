@@ -103,7 +103,7 @@ namespace LTWin_Last
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Baskerville Old Face", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(485, 90);
+            this.label7.Location = new System.Drawing.Point(510, 47);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(162, 43);
             this.label7.TabIndex = 37;
@@ -113,7 +113,7 @@ namespace LTWin_Last
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::LTWin_Last.Properties.Resources.css_gradient;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1182, 753);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button3);
