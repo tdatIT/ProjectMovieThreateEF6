@@ -30,7 +30,6 @@ namespace LTWin_Last
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Phim));
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -74,22 +73,9 @@ namespace LTWin_Last
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(27, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 39);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Phim";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -118,9 +104,9 @@ namespace LTWin_Last
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 300);
+            this.button1.Location = new System.Drawing.Point(45, 300);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 33);
+            this.button1.Size = new System.Drawing.Size(196, 33);
             this.button1.TabIndex = 29;
             this.button1.Text = "Xem chi tiết";
             this.button1.UseVisualStyleBackColor = true;
@@ -165,7 +151,6 @@ namespace LTWin_Last
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(443, 52);
@@ -193,9 +178,9 @@ namespace LTWin_Last
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 300);
+            this.button2.Location = new System.Drawing.Point(45, 300);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 33);
+            this.button2.Size = new System.Drawing.Size(196, 33);
             this.button2.TabIndex = 29;
             this.button2.Text = "Xem chi tiết";
             this.button2.UseVisualStyleBackColor = true;
@@ -212,7 +197,6 @@ namespace LTWin_Last
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.button12);
             this.panel3.Controls.Add(this.textBox4);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.pictureBox3);
@@ -241,9 +225,9 @@ namespace LTWin_Last
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 300);
+            this.button3.Location = new System.Drawing.Point(45, 300);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 33);
+            this.button3.Size = new System.Drawing.Size(196, 33);
             this.button3.TabIndex = 29;
             this.button3.Text = "Xem chi tiết";
             this.button3.UseVisualStyleBackColor = true;
@@ -260,7 +244,6 @@ namespace LTWin_Last
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.button11);
             this.panel4.Controls.Add(this.textBox5);
             this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.pictureBox4);
@@ -289,9 +272,9 @@ namespace LTWin_Last
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 300);
+            this.button4.Location = new System.Drawing.Point(45, 300);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 33);
+            this.button4.Size = new System.Drawing.Size(196, 33);
             this.button4.TabIndex = 29;
             this.button4.Text = "Xem chi tiết";
             this.button4.UseVisualStyleBackColor = true;
@@ -308,7 +291,6 @@ namespace LTWin_Last
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.button10);
             this.panel5.Controls.Add(this.textBox6);
             this.panel5.Controls.Add(this.button5);
             this.panel5.Controls.Add(this.pictureBox5);
@@ -337,9 +319,9 @@ namespace LTWin_Last
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(3, 300);
+            this.button5.Location = new System.Drawing.Point(45, 300);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(136, 33);
+            this.button5.Size = new System.Drawing.Size(196, 33);
             this.button5.TabIndex = 29;
             this.button5.Text = "Xem chi tiết";
             this.button5.UseVisualStyleBackColor = true;
@@ -393,9 +375,8 @@ namespace LTWin_Last
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label1);
             this.Name = "Phim";
-            this.Text = "Form1";
+            this.Text = "FILM";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -419,7 +400,6 @@ namespace LTWin_Last
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -445,10 +425,5 @@ namespace LTWin_Last
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
     }
 }

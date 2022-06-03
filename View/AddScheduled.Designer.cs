@@ -43,10 +43,12 @@ namespace LTWin_Last
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -100,18 +102,22 @@ namespace LTWin_Last
             // label6
             // 
             this.label6.AutoSize = true;
+
             this.label6.Font = new System.Drawing.Font("Be Vietnam Pro SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label6.Location = new System.Drawing.Point(32, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 26);
+
             this.label6.TabIndex = 41;
             this.label6.Text = "Ngày chiếu";
             // 
             // start_year
             // 
             this.start_year.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.start_year.Location = new System.Drawing.Point(347, 103);
+
             this.start_year.Name = "start_year";
             this.start_year.Size = new System.Drawing.Size(59, 30);
             this.start_year.TabIndex = 40;
@@ -119,7 +125,9 @@ namespace LTWin_Last
             // start_month
             // 
             this.start_month.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.start_month.Location = new System.Drawing.Point(295, 103);
+
             this.start_month.Name = "start_month";
             this.start_month.Size = new System.Drawing.Size(31, 30);
             this.start_month.TabIndex = 39;
@@ -127,7 +135,9 @@ namespace LTWin_Last
             // start_day
             // 
             this.start_day.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.start_day.Location = new System.Drawing.Point(232, 103);
+
             this.start_day.Name = "start_day";
             this.start_day.Size = new System.Drawing.Size(39, 30);
             this.start_day.TabIndex = 38;
@@ -135,27 +145,33 @@ namespace LTWin_Last
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.textBox1.Location = new System.Drawing.Point(232, 225);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(174, 30);
+
             this.textBox1.TabIndex = 36;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.textBox2.Location = new System.Drawing.Point(232, 284);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(174, 30);
+
             this.textBox2.TabIndex = 37;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+
             this.label2.Font = new System.Drawing.Font("Be Vietnam Pro SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(32, 288);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 26);
+
             this.label2.TabIndex = 31;
             this.label2.Text = "Phòng chiếu";
             // 
@@ -200,6 +216,7 @@ namespace LTWin_Last
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã suất chiếu";
             // 
+
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(33)))), ((int)(((byte)(59)))));
@@ -264,6 +281,7 @@ namespace LTWin_Last
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "AddSuat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddSuat";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

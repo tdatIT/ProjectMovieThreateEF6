@@ -16,5 +16,16 @@ namespace LTWin_Last
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddSuat addSuat = new AddSuat();
+            addSuat.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

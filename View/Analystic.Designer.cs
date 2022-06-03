@@ -121,7 +121,7 @@ namespace LTWin_Last
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_KH);
             this.Name = "Analystic";
-            this.Text = "Analystic";
+            this.Text = "ANALYTIC";
             this.ResumeLayout(false);
             this.PerformLayout();
 

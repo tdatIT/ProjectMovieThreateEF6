@@ -24,7 +24,8 @@ namespace LTWin_Last
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            frm_ChiTietPhim frm_ChiTietPhim = new frm_ChiTietPhim();
+            frm_ChiTietPhim.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)

@@ -246,6 +246,7 @@ namespace LTWin_Last
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.Name = "Add_Customercs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Customercs";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
