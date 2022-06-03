@@ -18,7 +18,7 @@ namespace LTWin_Last
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BookingTicket());
+            Application.Run(new MainForm());
         }
     }
 }
