@@ -56,14 +56,14 @@ namespace LTWin_Last
             this.panel1.Controls.Add(this.txt_name);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(85, 122);
+            this.panel1.Location = new System.Drawing.Point(227, 166);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(419, 322);
+            this.panel1.Size = new System.Drawing.Size(419, 439);
             this.panel1.TabIndex = 33;
             // 
             // textPhoneNumber
             // 
-            this.textPhoneNumber.Location = new System.Drawing.Point(30, 218);
+            this.textPhoneNumber.Location = new System.Drawing.Point(30, 337);
             this.textPhoneNumber.Name = "textPhoneNumber";
             this.textPhoneNumber.ReadOnly = true;
             this.textPhoneNumber.Size = new System.Drawing.Size(357, 34);
@@ -72,7 +72,7 @@ namespace LTWin_Last
             // 
             // textSEX
             // 
-            this.textSEX.Location = new System.Drawing.Point(30, 154);
+            this.textSEX.Location = new System.Drawing.Point(30, 270);
             this.textSEX.Name = "textSEX";
             this.textSEX.ReadOnly = true;
             this.textSEX.Size = new System.Drawing.Size(357, 34);
@@ -81,19 +81,19 @@ namespace LTWin_Last
             // 
             // txt_bIRTHDAY
             // 
-            this.txt_bIRTHDAY.Location = new System.Drawing.Point(152, 86);
+            this.txt_bIRTHDAY.Location = new System.Drawing.Point(30, 206);
             this.txt_bIRTHDAY.Name = "txt_bIRTHDAY";
             this.txt_bIRTHDAY.ReadOnly = true;
-            this.txt_bIRTHDAY.Size = new System.Drawing.Size(235, 34);
+            this.txt_bIRTHDAY.Size = new System.Drawing.Size(357, 34);
             this.txt_bIRTHDAY.TabIndex = 15;
             this.txt_bIRTHDAY.Text = "NGÀY SINH: ";
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(152, 40);
+            this.txt_name.Location = new System.Drawing.Point(30, 151);
             this.txt_name.Name = "txt_name";
             this.txt_name.ReadOnly = true;
-            this.txt_name.Size = new System.Drawing.Size(235, 34);
+            this.txt_name.Size = new System.Drawing.Size(357, 34);
             this.txt_name.TabIndex = 14;
             this.txt_name.Text = "TÊN: ";
             // 
@@ -111,9 +111,9 @@ namespace LTWin_Last
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnUpdate.Location = new System.Drawing.Point(588, 329);
+            this.btnUpdate.Location = new System.Drawing.Point(741, 498);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(127, 60);
+            this.btnUpdate.Size = new System.Drawing.Size(191, 107);
             this.btnUpdate.TabIndex = 40;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -122,9 +122,9 @@ namespace LTWin_Last
             // 
             this.btnDEL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnDEL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDEL.Location = new System.Drawing.Point(584, 236);
+            this.btnDEL.Location = new System.Drawing.Point(741, 338);
             this.btnDEL.Name = "btnDEL";
-            this.btnDEL.Size = new System.Drawing.Size(131, 60);
+            this.btnDEL.Size = new System.Drawing.Size(191, 107);
             this.btnDEL.TabIndex = 39;
             this.btnDEL.Text = "Xoá";
             this.btnDEL.UseVisualStyleBackColor = false;
@@ -133,12 +133,13 @@ namespace LTWin_Last
             // 
             this.btnInsert.BackColor = System.Drawing.Color.Cyan;
             this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnInsert.Location = new System.Drawing.Point(584, 137);
+            this.btnInsert.Location = new System.Drawing.Point(741, 166);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(131, 60);
+            this.btnInsert.Size = new System.Drawing.Size(191, 107);
             this.btnInsert.TabIndex = 38;
             this.btnInsert.Text = "Thêm";
             this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // label2
             // 
@@ -184,7 +185,7 @@ namespace LTWin_Last
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LTWin_Last.Properties.Resources.css_gradient;
-            this.ClientSize = new System.Drawing.Size(816, 466);
+            this.ClientSize = new System.Drawing.Size(1182, 753);
             this.Controls.Add(this.btnLook);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnUpdate);
@@ -194,7 +195,7 @@ namespace LTWin_Last
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "Customer";
-            this.Text = "Customer";
+            this.Text = "CUSTOMER";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

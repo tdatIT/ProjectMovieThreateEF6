@@ -218,6 +218,7 @@ namespace LTWin_Last
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frm_ChiTietPhim";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết phim";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

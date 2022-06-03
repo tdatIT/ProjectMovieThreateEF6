@@ -80,6 +80,7 @@ namespace LTWin_Last
             this.button1.TabIndex = 3;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -118,7 +119,7 @@ namespace LTWin_Last
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Suat";
-            this.Text = "Suat";
+            this.Text = "SCHEDULED";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

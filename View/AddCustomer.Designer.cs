@@ -211,7 +211,9 @@ namespace LTWin_Last
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.panel1);
+            this.Location = new System.Drawing.Point(227, 166);
             this.Name = "Add_Customercs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Customercs";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

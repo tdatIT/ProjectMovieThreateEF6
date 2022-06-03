@@ -16,5 +16,11 @@ namespace LTWin_Last
         {
             InitializeComponent();
         }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            Add_Customercs add_Customercs = new Add_Customercs();
+            add_Customercs.Show();
+        }
     }
 }
