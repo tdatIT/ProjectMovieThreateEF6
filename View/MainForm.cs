@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace LTWin_Last
 {
     public partial class MainForm : Form
@@ -60,29 +61,33 @@ namespace LTWin_Last
             pn_child.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lbl_Title.Text = childForm.Text;
+           
         }
 
         private void btn_Suat_Click(object sender, EventArgs e)
         {
             openChildForm(new Suat(), sender);
-        }
+			lbl_Title.Text = "LỊCH CHIẾU";
+		}
 
         private void btn_KH_Click(object sender, EventArgs e)
         {
             openChildForm(new Customer(), sender);
-        }
+			lbl_Title.Text = "KHÁCH HÀNG";
+		}
 
         private void btn_Phim_Click(object sender, EventArgs e)
         {
             openChildForm(new Phim(), sender);
-           
-        }
+			lbl_Title.Text = "PHIM";
+
+		}
 
         private void btn_Ptich_Click(object sender, EventArgs e)
         {
             openChildForm(new Analystic(), sender);
-        }
+			lbl_Title.Text = "PHÂN TÍCH DỮ LIỆU";
+		}
 
         private void bnt_Back_Click(object sender, EventArgs e)
         {
@@ -93,11 +98,45 @@ namespace LTWin_Last
         private void Reset()
         {
             disableButton();
-            lbl_Title.Text = "HOME";
+            lbl_Title.Text = "TRANG CHỦ";
             currentBtn = null;
             bnt_Back.Visible = false;
         }
 
-        
-    }
+		private void button5_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void button5_Click_1(object sender, EventArgs e)
+		{
+			this.WindowState = FormWindowState.Minimized;
+		}
+
+		private void timer1_Tick(object sender, EventArgs e)
+		{
+			lb_Time.Text = DateTime.Now.ToString();
+		}
+
+		private void lb_Time_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void pn_title_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void MainForm_Load(object sender, EventArgs e)
+		{
+			lb_Time.Text = DateTime.Now.ToString();
+			
+		}
+
+		private void panel3_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+	}
 }
