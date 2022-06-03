@@ -83,6 +83,26 @@ namespace LTWin_Last.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dự_án_mới {
+            get {
+                object obj = ResourceManager.GetObject("Dự án mới", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GTSP65G {
+            get {
+                object obj = ResourceManager.GetObject("GTSP65G", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Look_icon {
             get {
                 object obj = ResourceManager.GetObject("Look-icon", resourceCulture);
