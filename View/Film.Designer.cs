@@ -32,6 +32,7 @@ namespace LTWin_Last
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Phim));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -40,27 +41,26 @@ namespace LTWin_Last
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -97,6 +97,16 @@ namespace LTWin_Last
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(291, 343);
             this.panel2.TabIndex = 29;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(168, 300);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(123, 33);
+            this.button8.TabIndex = 44;
+            this.button8.Text = "Suất chiếu";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -170,6 +180,16 @@ namespace LTWin_Last
             this.textBox3.Size = new System.Drawing.Size(291, 22);
             this.textBox3.TabIndex = 43;
             // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(165, 300);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(123, 33);
+            this.button9.TabIndex = 45;
+            this.button9.Text = "Suất chiếu";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,6 +220,16 @@ namespace LTWin_Last
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(291, 343);
             this.panel3.TabIndex = 38;
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(168, 300);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(123, 33);
+            this.button12.TabIndex = 45;
+            this.button12.Text = "Suất chiếu";
+            this.button12.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -239,6 +269,16 @@ namespace LTWin_Last
             this.panel4.Size = new System.Drawing.Size(291, 343);
             this.panel4.TabIndex = 39;
             // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(168, 300);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(123, 33);
+            this.button11.TabIndex = 47;
+            this.button11.Text = "Suất chiếu";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(0, 272);
@@ -276,6 +316,16 @@ namespace LTWin_Last
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(291, 343);
             this.panel5.TabIndex = 40;
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(168, 300);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(123, 33);
+            this.button10.TabIndex = 46;
+            this.button10.Text = "Suất chiếu";
+            this.button10.UseVisualStyleBackColor = true;
             // 
             // textBox6
             // 
@@ -327,56 +377,6 @@ namespace LTWin_Last
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(168, 300);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(123, 33);
-            this.button8.TabIndex = 44;
-            this.button8.Text = "Suất chiếu";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(165, 300);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(123, 33);
-            this.button9.TabIndex = 45;
-            this.button9.Text = "Suất chiếu";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(168, 300);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(123, 33);
-            this.button10.TabIndex = 46;
-            this.button10.Text = "Suất chiếu";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(168, 300);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(123, 33);
-            this.button11.TabIndex = 47;
-            this.button11.Text = "Suất chiếu";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(168, 300);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(123, 33);
-            this.button12.TabIndex = 45;
-            this.button12.Text = "Suất chiếu";
-            this.button12.UseVisualStyleBackColor = true;
             // 
             // Phim
             // 

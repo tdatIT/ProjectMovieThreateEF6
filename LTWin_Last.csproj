@@ -57,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Controller.cs" />
+    <Compile Include="FilmDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Employee.cs" />
     <Compile Include="Model\Movie.cs" />
@@ -64,11 +67,23 @@
     <Compile Include="Model\Room.cs" />
     <Compile Include="Model\ScheduledMovie.cs" />
     <Compile Include="Model\Ticket.cs" />
+    <Compile Include="View\AddFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddFilm.Designer.cs">
+      <DependentUpon>AddFilm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AddScheduled.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\AddScheduled.Designer.cs">
       <DependentUpon>AddScheduled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Booking.Designer.cs">
+      <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FilmDetail.cs">
       <SubType>Form</SubType>
@@ -120,8 +135,14 @@
     <Compile Include="View\Scheduled.Designer.cs">
       <DependentUpon>Scheduled.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AddFilm.resx">
+      <DependentUpon>AddFilm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AddScheduled.resx">
       <DependentUpon>AddScheduled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Booking.resx">
+      <DependentUpon>Booking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FilmDetail.resx">
       <DependentUpon>FilmDetail.cs</DependentUpon>
@@ -183,7 +204,12 @@
   <ItemGroup>
     <None Include="Resources\Archery-Target-icon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\GTSP65G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dự án mới.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

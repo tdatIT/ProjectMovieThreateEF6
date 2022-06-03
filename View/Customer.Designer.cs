@@ -144,9 +144,10 @@ namespace LTWin_Last
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(153, 78);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(122, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 17);
+            this.label2.Size = new System.Drawing.Size(149, 28);
             this.label2.TabIndex = 37;
             this.label2.Text = "SỐ ĐIỆN THOẠI";
             // 
@@ -173,9 +174,9 @@ namespace LTWin_Last
             // 
             this.btnLook.BackColor = System.Drawing.Color.Transparent;
             this.btnLook.Image = global::LTWin_Last.Properties.Resources.Look_icon;
-            this.btnLook.Location = new System.Drawing.Point(510, 73);
+            this.btnLook.Location = new System.Drawing.Point(541, 64);
             this.btnLook.Name = "btnLook";
-            this.btnLook.Size = new System.Drawing.Size(40, 22);
+            this.btnLook.Size = new System.Drawing.Size(33, 31);
             this.btnLook.TabIndex = 43;
             this.btnLook.UseVisualStyleBackColor = false;
             // 
