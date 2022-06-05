@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LTWin_Last.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -137,6 +138,30 @@ namespace LTWin_Last
 		private void panel3_Paint(object sender, PaintEventArgs e)
 		{
 
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			AddFilm addFilm = new AddFilm();
+			addFilm.Visible = true;
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			AddSuat addSuat = new AddSuat();
+			addSuat.Visible = true;
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			Add_Customercs add_Customercs = new Add_Customercs();
+			add_Customercs.Visible = true;
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			openChildForm(new Book(), sender);
+			lbl_Title.Text = "Đặt vé";
 		}
 	}
 }

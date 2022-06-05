@@ -32,5 +32,50 @@ namespace LTWin_Last
         {
 
         }
-    }
+
+		private void panel6_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void pictureBox5_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+		
+		}
+
+		private void txt_search_MouseClick(object sender, MouseEventArgs e)
+		{
+		
+		}
+
+		private void comboBox1_Click(object sender, EventArgs e)
+		{
+			if(cbx_search.Text.Equals("Tên phim"))
+			{
+				cbx_search.Text = "";
+			}
+		}
+
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void comboBox1_TextChanged(object sender, EventArgs e)
+		{
+
+			cbx_search.Font = new Font("Be VietNam Pro", cbx_search.Font.Size, FontStyle.Regular);
+			cbx_search.ForeColor = Color.Black;
+		}
+	}
 }
