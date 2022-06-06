@@ -24,7 +24,7 @@ namespace Project_LT_Windows_EF6.Model
 		//Field: Birthday DATE 
 		public DateTime? Birthday { get; set; }
 
-		//Field: Sex BYTE
+		//Field: Sex BIT
 		public bool Sex { get; set; }
 
 		public Customer()

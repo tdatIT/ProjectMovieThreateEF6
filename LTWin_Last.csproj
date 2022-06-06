@@ -85,6 +85,7 @@
     <Compile Include="Model\Employee.cs" />
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Model\MovieTheaterContext.cs" />
+    <Compile Include="Model\EnumNoSeats.cs" />
     <Compile Include="Model\Room.cs" />
     <Compile Include="Model\ScheduledMovie.cs" />
     <Compile Include="Model\Ticket.cs" />
@@ -142,6 +143,12 @@
     <Compile Include="View\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\InitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InitForm.Designer.cs">
+      <DependentUpon>InitForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\InitForm.resx">
+      <DependentUpon>InitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -234,6 +244,7 @@
   <ItemGroup>
     <Content Include="Resources\Designbolts-Free-Multimedia-Film.ico" />
     <Content Include="Resources\icon_img.jpg" />
+    <Content Include="Resources\loading__.gif" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

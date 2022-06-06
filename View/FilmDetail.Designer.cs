@@ -131,7 +131,7 @@ namespace LTWin_Last
 			this.txt_Ten.BackColor = System.Drawing.SystemColors.Window;
 			this.txt_Ten.Cursor = System.Windows.Forms.Cursors.Default;
 			this.txt_Ten.Location = new System.Drawing.Point(412, 100);
-			this.txt_Ten.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txt_Ten.Margin = new System.Windows.Forms.Padding(2);
 			this.txt_Ten.Name = "txt_Ten";
 			this.txt_Ten.Size = new System.Drawing.Size(276, 20);
 			this.txt_Ten.TabIndex = 34;
@@ -139,7 +139,7 @@ namespace LTWin_Last
 			// txt_tloai
 			// 
 			this.txt_tloai.Location = new System.Drawing.Point(412, 148);
-			this.txt_tloai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txt_tloai.Margin = new System.Windows.Forms.Padding(2);
 			this.txt_tloai.Name = "txt_tloai";
 			this.txt_tloai.Size = new System.Drawing.Size(276, 20);
 			this.txt_tloai.TabIndex = 35;
@@ -147,7 +147,7 @@ namespace LTWin_Last
 			// txt_tomtat
 			// 
 			this.txt_tomtat.Location = new System.Drawing.Point(412, 199);
-			this.txt_tomtat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txt_tomtat.Margin = new System.Windows.Forms.Padding(2);
 			this.txt_tomtat.Name = "txt_tomtat";
 			this.txt_tomtat.Size = new System.Drawing.Size(276, 20);
 			this.txt_tomtat.TabIndex = 36;
@@ -155,7 +155,7 @@ namespace LTWin_Last
 			// txt_dv
 			// 
 			this.txt_dv.Location = new System.Drawing.Point(412, 249);
-			this.txt_dv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txt_dv.Margin = new System.Windows.Forms.Padding(2);
 			this.txt_dv.Name = "txt_dv";
 			this.txt_dv.Size = new System.Drawing.Size(276, 20);
 			this.txt_dv.TabIndex = 37;
@@ -163,7 +163,7 @@ namespace LTWin_Last
 			// txt_dd
 			// 
 			this.txt_dd.Location = new System.Drawing.Point(412, 298);
-			this.txt_dd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txt_dd.Margin = new System.Windows.Forms.Padding(2);
 			this.txt_dd.Name = "txt_dd";
 			this.txt_dd.Size = new System.Drawing.Size(276, 20);
 			this.txt_dd.TabIndex = 38;
@@ -171,7 +171,7 @@ namespace LTWin_Last
 			// txt_time
 			// 
 			this.txt_time.Location = new System.Drawing.Point(412, 348);
-			this.txt_time.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txt_time.Margin = new System.Windows.Forms.Padding(2);
 			this.txt_time.Name = "txt_time";
 			this.txt_time.Size = new System.Drawing.Size(276, 20);
 			this.txt_time.TabIndex = 39;
@@ -193,7 +193,7 @@ namespace LTWin_Last
 			// 
 			this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
 			this.pictureBox1.Location = new System.Drawing.Point(62, 94);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(218, 341);
 			this.pictureBox1.TabIndex = 41;
@@ -204,7 +204,7 @@ namespace LTWin_Last
 			this.btn_fix.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_fix.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.btn_fix.Location = new System.Drawing.Point(454, 402);
-			this.btn_fix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btn_fix.Margin = new System.Windows.Forms.Padding(2);
 			this.btn_fix.Name = "btn_fix";
 			this.btn_fix.Size = new System.Drawing.Size(189, 33);
 			this.btn_fix.TabIndex = 42;
@@ -232,10 +232,11 @@ namespace LTWin_Last
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "frm_ChiTietPhim";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Chi tiết phim";
+			this.Load += new System.EventHandler(this.frm_ChiTietPhim_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

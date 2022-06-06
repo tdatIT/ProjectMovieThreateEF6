@@ -38,11 +38,11 @@ namespace LTWin_Last
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.cbx_search = new System.Windows.Forms.ComboBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.button6 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
-			this.cbx_search = new System.Windows.Forms.ComboBox();
 			this.panel5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -73,6 +73,7 @@ namespace LTWin_Last
 			this.button5.TabIndex = 29;
 			this.button5.Text = "Chi tiết";
 			this.button5.UseVisualStyleBackColor = false;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
 			// 
 			// pictureBox5
 			// 
@@ -110,6 +111,7 @@ namespace LTWin_Last
 			this.button1.TabIndex = 29;
 			this.button1.Text = "Thêm phim";
 			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click_1);
 			// 
 			// pictureBox1
 			// 
@@ -144,6 +146,20 @@ namespace LTWin_Last
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(886, 78);
 			this.panel3.TabIndex = 43;
+			// 
+			// cbx_search
+			// 
+			this.cbx_search.Font = new System.Drawing.Font("Be Vietnam Pro", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbx_search.ForeColor = System.Drawing.SystemColors.WindowFrame;
+			this.cbx_search.FormattingEnabled = true;
+			this.cbx_search.Location = new System.Drawing.Point(212, 23);
+			this.cbx_search.Name = "cbx_search";
+			this.cbx_search.Size = new System.Drawing.Size(431, 32);
+			this.cbx_search.TabIndex = 40;
+			this.cbx_search.Text = "Tên phim";
+			this.cbx_search.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+			this.cbx_search.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
+			this.cbx_search.Click += new System.EventHandler(this.comboBox1_Click);
 			// 
 			// label2
 			// 
@@ -196,20 +212,6 @@ namespace LTWin_Last
 			this.button3.TabIndex = 45;
 			this.button3.Text = "ᐳ";
 			this.button3.UseVisualStyleBackColor = true;
-			// 
-			// cbx_search
-			// 
-			this.cbx_search.Font = new System.Drawing.Font("Be Vietnam Pro", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.cbx_search.ForeColor = System.Drawing.SystemColors.WindowFrame;
-			this.cbx_search.FormattingEnabled = true;
-			this.cbx_search.Location = new System.Drawing.Point(212, 23);
-			this.cbx_search.Name = "cbx_search";
-			this.cbx_search.Size = new System.Drawing.Size(431, 32);
-			this.cbx_search.TabIndex = 40;
-			this.cbx_search.Text = "Tên phim";
-			this.cbx_search.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-			this.cbx_search.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
-			this.cbx_search.Click += new System.EventHandler(this.comboBox1_Click);
 			// 
 			// Phim
 			// 

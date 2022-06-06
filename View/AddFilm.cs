@@ -37,14 +37,7 @@ namespace LTWin_Last.View
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog()
-            { Filter = "Image file(*.png)|*png", Multiselect = false })
-            {
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    ptb_Anh.Image = Image.FromFile(ofd.FileName);
-                }
-            }
+           
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -96,5 +89,21 @@ namespace LTWin_Last.View
         {
             lb_time.Text = DateTime.Now.ToString();
         }
-    }
+
+		private void ptb_Anh_Click(object sender, EventArgs e)
+		{
+			using (OpenFileDialog ofd = new OpenFileDialog()
+			{ Filter = "Image file(*.jpg)|*jpg", Multiselect = false })
+			{
+				if (ofd.ShowDialog() == DialogResult.OK)
+				{
+					ptb_Anh.Image = Image.FromFile(ofd.FileName);
+				}
+			}
+		}
+		private void button1_Click(object sender, EventArgs e)
+		{
+			
+		}
+	}
 }

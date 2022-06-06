@@ -14,9 +14,13 @@ namespace Project_LT_Windows_EF6.Model
 		[Key]
 		public int Id { get; set; }
 
-		//Feild: No_seat INT NOT NULL
+		//Field: No_seat INT NOT NULL
 		[Required]
 		public int No_seat { get; set; }
+
+		//Field: Price DOUBLE NOT NULL
+		[Required]
+		public double Price { get; set; }
 
 		//ForeignKey: C_phone_number CHAR(11)
 		[StringLength(11,MinimumLength =11)]

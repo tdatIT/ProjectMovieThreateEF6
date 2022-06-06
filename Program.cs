@@ -1,5 +1,5 @@
-﻿
-using LTWin_Last.View;
+﻿using LTWin_Last.View;
+using Project_LT_Windows_EF6.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,8 @@ namespace LTWin_Last
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new InitForm());
+	
         }
     }
 }

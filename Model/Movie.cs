@@ -44,6 +44,10 @@ namespace Project_LT_Windows_EF6.Model
 		[Column(TypeName ="image")]
 		public byte[] Poster { get; set; }
 
+		//Field: Status BIT NOT NULL
+		[Required]
+		public bool Status { get; set; }
+
 		public Movie()
 		{
 			

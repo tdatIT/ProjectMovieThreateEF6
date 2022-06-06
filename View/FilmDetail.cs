@@ -21,5 +21,10 @@ namespace LTWin_Last
         {
 
         }
-    }
+
+		private void frm_ChiTietPhim_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

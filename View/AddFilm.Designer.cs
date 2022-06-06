@@ -52,6 +52,9 @@ namespace LTWin_Last.View
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.lb_time = new System.Windows.Forms.Label();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.label1 = new System.Windows.Forms.Label();
+			this.radioButton1 = new System.Windows.Forms.RadioButton();
+			this.radioButton2 = new System.Windows.Forms.RadioButton();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.ptb_Anh)).BeginInit();
 			this.panel2.SuspendLayout();
@@ -79,12 +82,13 @@ namespace LTWin_Last.View
 			this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.button1.Location = new System.Drawing.Point(457, 358);
-			this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.button1.Margin = new System.Windows.Forms.Padding(2);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(146, 40);
 			this.button1.TabIndex = 7;
 			this.button1.Text = "THÊM PHIM";
 			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// label8
 			// 
@@ -101,7 +105,7 @@ namespace LTWin_Last.View
 			// txtPhim
 			// 
 			this.txtPhim.Location = new System.Drawing.Point(82, 100);
-			this.txtPhim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtPhim.Margin = new System.Windows.Forms.Padding(2);
 			this.txtPhim.Name = "txtPhim";
 			this.txtPhim.Size = new System.Drawing.Size(91, 25);
 			this.txtPhim.TabIndex = 10;
@@ -109,7 +113,7 @@ namespace LTWin_Last.View
 			// txtCatagory
 			// 
 			this.txtCatagory.Location = new System.Drawing.Point(239, 100);
-			this.txtCatagory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtCatagory.Margin = new System.Windows.Forms.Padding(2);
 			this.txtCatagory.Name = "txtCatagory";
 			this.txtCatagory.Size = new System.Drawing.Size(108, 25);
 			this.txtCatagory.TabIndex = 11;
@@ -117,7 +121,7 @@ namespace LTWin_Last.View
 			// textBox7
 			// 
 			this.textBox7.Location = new System.Drawing.Point(239, 177);
-			this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.textBox7.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox7.Name = "textBox7";
 			this.textBox7.Size = new System.Drawing.Size(108, 25);
 			this.textBox7.TabIndex = 15;
@@ -125,6 +129,9 @@ namespace LTWin_Last.View
 			// panel1
 			// 
 			this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.panel1.Controls.Add(this.radioButton2);
+			this.panel1.Controls.Add(this.radioButton1);
+			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.ptb_Anh);
 			this.panel1.Controls.Add(this.textBox5);
 			this.panel1.Controls.Add(this.label12);
@@ -142,9 +149,9 @@ namespace LTWin_Last.View
 			this.panel1.Controls.Add(this.label9);
 			this.panel1.Font = new System.Drawing.Font("Be Vietnam Pro SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.panel1.Location = new System.Drawing.Point(91, 98);
-			this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.panel1.Margin = new System.Windows.Forms.Padding(2);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(702, 412);
+			this.panel1.Size = new System.Drawing.Size(702, 440);
 			this.panel1.TabIndex = 16;
 			this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
 			// 
@@ -153,17 +160,18 @@ namespace LTWin_Last.View
 			this.ptb_Anh.BackColor = System.Drawing.Color.Transparent;
 			this.ptb_Anh.Image = ((System.Drawing.Image)(resources.GetObject("ptb_Anh.Image")));
 			this.ptb_Anh.Location = new System.Drawing.Point(424, 37);
-			this.ptb_Anh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.ptb_Anh.Margin = new System.Windows.Forms.Padding(2);
 			this.ptb_Anh.Name = "ptb_Anh";
 			this.ptb_Anh.Size = new System.Drawing.Size(220, 284);
 			this.ptb_Anh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.ptb_Anh.TabIndex = 21;
 			this.ptb_Anh.TabStop = false;
+			this.ptb_Anh.Click += new System.EventHandler(this.ptb_Anh_Click);
 			// 
 			// textBox5
 			// 
 			this.textBox5.Location = new System.Drawing.Point(80, 37);
-			this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.textBox5.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox5.Name = "textBox5";
 			this.textBox5.Size = new System.Drawing.Size(265, 25);
 			this.textBox5.TabIndex = 20;
@@ -194,7 +202,7 @@ namespace LTWin_Last.View
 			// textBox1
 			// 
 			this.textBox1.Location = new System.Drawing.Point(80, 177);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.textBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(91, 25);
 			this.textBox1.TabIndex = 17;
@@ -202,7 +210,7 @@ namespace LTWin_Last.View
 			// Rt_info
 			// 
 			this.Rt_info.Location = new System.Drawing.Point(80, 261);
-			this.Rt_info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Rt_info.Margin = new System.Windows.Forms.Padding(2);
 			this.Rt_info.Name = "Rt_info";
 			this.Rt_info.Size = new System.Drawing.Size(265, 122);
 			this.Rt_info.TabIndex = 16;
@@ -265,7 +273,7 @@ namespace LTWin_Last.View
 			this.panel2.Controls.Add(this.label7);
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel2.Location = new System.Drawing.Point(0, 0);
-			this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.panel2.Margin = new System.Windows.Forms.Padding(2);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(886, 66);
 			this.panel2.TabIndex = 19;
@@ -276,7 +284,7 @@ namespace LTWin_Last.View
 			this.panel3.Controls.Add(this.lb_time);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.panel3.Location = new System.Drawing.Point(0, 577);
-			this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.panel3.Margin = new System.Windows.Forms.Padding(2);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(886, 32);
 			this.panel3.TabIndex = 20;
@@ -299,6 +307,42 @@ namespace LTWin_Last.View
 			this.timer1.Interval = 1000;
 			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Be Vietnam Pro SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.label1.Location = new System.Drawing.Point(79, 404);
+			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(106, 22);
+			this.label1.TabIndex = 22;
+			this.label1.Text = "Trạng thái PV:";
+			// 
+			// radioButton1
+			// 
+			this.radioButton1.AutoSize = true;
+			this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlLight;
+			this.radioButton1.Location = new System.Drawing.Point(275, 402);
+			this.radioButton1.Name = "radioButton1";
+			this.radioButton1.Size = new System.Drawing.Size(72, 26);
+			this.radioButton1.TabIndex = 23;
+			this.radioButton1.TabStop = true;
+			this.radioButton1.Text = "Không";
+			this.radioButton1.UseVisualStyleBackColor = true;
+			// 
+			// radioButton2
+			// 
+			this.radioButton2.AutoSize = true;
+			this.radioButton2.ForeColor = System.Drawing.SystemColors.ControlLight;
+			this.radioButton2.Location = new System.Drawing.Point(190, 402);
+			this.radioButton2.Name = "radioButton2";
+			this.radioButton2.Size = new System.Drawing.Size(48, 26);
+			this.radioButton2.TabIndex = 23;
+			this.radioButton2.TabStop = true;
+			this.radioButton2.Text = "Có";
+			this.radioButton2.UseVisualStyleBackColor = true;
+			// 
 			// AddFilm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,7 +353,7 @@ namespace LTWin_Last.View
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.KeyPreview = true;
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "AddFilm";
 			this.Text = "AddFilm";
 			this.Load += new System.EventHandler(this.AddFilm_Load);
@@ -346,5 +390,8 @@ namespace LTWin_Last.View
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lb_time;
         private System.Windows.Forms.Timer timer1;
-    }
+		private System.Windows.Forms.RadioButton radioButton2;
+		private System.Windows.Forms.RadioButton radioButton1;
+		private System.Windows.Forms.Label label1;
+	}
 }

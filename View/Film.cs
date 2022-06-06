@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LTWin_Last.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,6 +77,18 @@ namespace LTWin_Last
 
 			cbx_search.Font = new Font("Be VietNam Pro", cbx_search.Font.Size, FontStyle.Regular);
 			cbx_search.ForeColor = Color.Black;
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			frm_ChiTietPhim frm_ChiTietPhim = new frm_ChiTietPhim();
+			frm_ChiTietPhim.Show();
+		}
+
+		private void button1_Click_1(object sender, EventArgs e)
+		{
+			AddFilm addFilm = new AddFilm();
+			addFilm.Show();
 		}
 	}
 }
