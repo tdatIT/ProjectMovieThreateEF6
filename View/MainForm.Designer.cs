@@ -52,7 +52,7 @@ namespace LTWin_Last
 			this.label8 = new System.Windows.Forms.Label();
 			this.lb_Time = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
+			this.lb_name = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label3 = new System.Windows.Forms.Label();
@@ -131,6 +131,7 @@ namespace LTWin_Last
 			this.lbl_Title.TabIndex = 1;
 			this.lbl_Title.Text = "TRANG CHỦ";
 			this.lbl_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lbl_Title.Click += new System.EventHandler(this.lbl_Title_Click);
 			// 
 			// bnt_Back
 			// 
@@ -188,6 +189,7 @@ namespace LTWin_Last
 			this.label4.TabIndex = 2;
 			this.label4.Text = "DHD\r\n Movie Threater";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.label4.Click += new System.EventHandler(this.label4_Click);
 			// 
 			// btn_Ptich
 			// 
@@ -327,7 +329,7 @@ namespace LTWin_Last
 			this.panel3.Controls.Add(this.label8);
 			this.panel3.Controls.Add(this.lb_Time);
 			this.panel3.Controls.Add(this.label7);
-			this.panel3.Controls.Add(this.label6);
+			this.panel3.Controls.Add(this.lb_name);
 			this.panel3.Controls.Add(this.label5);
 			this.panel3.Location = new System.Drawing.Point(86, 61);
 			this.panel3.Name = "panel3";
@@ -377,19 +379,19 @@ namespace LTWin_Last
 			this.label7.Text = "▶";
 			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// label6
+			// lb_name
 			// 
-			this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Open Sans Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.label6.Location = new System.Drawing.Point(51, 83);
-			this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(113, 31);
-			this.label6.TabIndex = 8;
-			this.label6.Text = "Nguyễn Văn A";
-			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lb_name.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lb_name.AutoSize = true;
+			this.lb_name.Font = new System.Drawing.Font("Open Sans Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lb_name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.lb_name.Location = new System.Drawing.Point(51, 83);
+			this.lb_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lb_name.Name = "lb_name";
+			this.lb_name.Size = new System.Drawing.Size(113, 31);
+			this.lb_name.TabIndex = 8;
+			this.lb_name.Text = "Nguyễn Văn A";
+			this.lb_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// label5
 			// 
@@ -563,7 +565,7 @@ namespace LTWin_Last
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label lb_Time;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label lb_name;
 		private System.Windows.Forms.Label label5;
 	}
 }

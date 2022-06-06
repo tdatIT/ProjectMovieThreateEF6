@@ -43,9 +43,8 @@ namespace LTWin_Last.View
 				if (dbExists == true)
 				{
 					this.Visible = false;
-					MainForm mainForm = new MainForm();
-					mainForm.Visible = true;
-
+					Login login = new Login();
+					login.Show();
 				}
 				else
 				{

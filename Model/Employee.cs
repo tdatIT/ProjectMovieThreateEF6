@@ -34,7 +34,7 @@ namespace Project_LT_Windows_EF6.Model
 		[Column(TypeName = "char")]
 		public string Username { get; set; }
 
-		//Field: Username char(50) NOT NULL
+		//Field: Password char(50) NOT NULL
 		[Required]
 		[StringLength(50, MinimumLength = 5)]
 		[Column(TypeName = "char")]

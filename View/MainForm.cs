@@ -1,4 +1,5 @@
 ﻿using LTWin_Last.View;
+using Project_LT_Windows_EF6.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,13 @@ namespace LTWin_Last
 {
     public partial class MainForm : Form
     {
+		private Employee employee;
         private Button currentBtn;
         private Form activeForm = new Form();
-        public MainForm()
+        public MainForm(Employee employee)
         {
-            InitializeComponent();
+			this.employee = employee;
+			InitializeComponent();
             bnt_Back.Visible = false;
         }
 
@@ -132,7 +135,7 @@ namespace LTWin_Last
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			lb_Time.Text = DateTime.Now.ToString();
-			
+			lb_name.Text = this.employee.Name;
 		}
 
 		private void panel3_Paint(object sender, PaintEventArgs e)
@@ -162,6 +165,16 @@ namespace LTWin_Last
 		{
 			openChildForm(new Book(), sender);
 			lbl_Title.Text = "Đặt vé";
+		}
+
+		private void lbl_Title_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label4_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
