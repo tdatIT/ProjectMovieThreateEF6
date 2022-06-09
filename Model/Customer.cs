@@ -15,7 +15,7 @@ namespace Project_LT_Windows_EF6.Model
 		[Column(TypeName ="char")]
 		[StringLength(11)]
 		public string C_phone_number { get; set; }
-
+		
 		//Field: Name NVARCHAR(40) NOT NULL
 		[Required]
 		[MaxLength(40)]

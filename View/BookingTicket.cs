@@ -21,18 +21,18 @@ namespace LTWin_Last
 		void initStyleDataGridView()
 		{
 
-			dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-			dataGridView1.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
-			dataGridView1.DefaultCellStyle.SelectionForeColor = Color.FromArgb(30, 30, 30);
-			dataGridView1.BackgroundColor = Color.White;
+			dgv_BookingTicket.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+			dgv_BookingTicket.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+			dgv_BookingTicket.DefaultCellStyle.SelectionForeColor = Color.FromArgb(30, 30, 30);
+			dgv_BookingTicket.BackgroundColor = Color.White;
 			//style rows
-			dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-			dataGridView1.EnableHeadersVisualStyles = false;
-			dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+			dgv_BookingTicket.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+			dgv_BookingTicket.EnableHeadersVisualStyles = false;
+			dgv_BookingTicket.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
 			//style header
-			dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Be VietNam Pro", 10);
-			dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(3, 33, 59);
-			dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+			dgv_BookingTicket.ColumnHeadersDefaultCellStyle.Font = new Font("Be VietNam Pro", 10);
+			dgv_BookingTicket.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(3, 33, 59);
+			dgv_BookingTicket.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 		}
 		private void panel1_Paint(object sender, PaintEventArgs e)
         {

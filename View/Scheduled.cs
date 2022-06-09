@@ -40,18 +40,18 @@ namespace LTWin_Last
 		void initStyleDataGridView()
 		{
 			
-			dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-			dataGridView1.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
-			dataGridView1.DefaultCellStyle.SelectionForeColor = Color.FromArgb(30, 30, 30);
-			dataGridView1.BackgroundColor = Color.White;
+			dgv_Schedule.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+			dgv_Schedule.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+			dgv_Schedule.DefaultCellStyle.SelectionForeColor = Color.FromArgb(30, 30, 30);
+			dgv_Schedule.BackgroundColor = Color.White;
 			//style rows
-			dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-			dataGridView1.EnableHeadersVisualStyles = false;
-			dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+			dgv_Schedule.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+			dgv_Schedule.EnableHeadersVisualStyles = false;
+			dgv_Schedule.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
 			//style header
-			dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Be VietNam Pro", 10);
-			dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(3, 33, 59);
-			dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+			dgv_Schedule.ColumnHeadersDefaultCellStyle.Font = new Font("Be VietNam Pro", 10);
+			dgv_Schedule.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(3, 33, 59);
+			dgv_Schedule.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 		}
 	}
 }

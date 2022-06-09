@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_Ptich.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Analystic.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAD8AAABBCAYAAABmd3xuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABM
         5AAATOQBp4kScQAAABF0RVh0RGVzY3JpcHRpb24AUHJpbnQkxrTwAAAAIHRFWHRDcmVhdGlvblRpbWUA
@@ -240,7 +240,7 @@
         xI7/5iVv/7/TseMvQi/a/wFAB68p8HlrCQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_KH.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Customer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEIAAAA9CAYAAAAZIL/8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABM
         5AAATOQBp4kScQAAABF0RVh0RGVzY3JpcHRpb24AUHJpbnQkxrTwAAAAIHRFWHRDcmVhdGlvblRpbWUA
@@ -365,7 +365,7 @@
         +tlK9Vc+EY7lZshDqXaj6RH7H8rxglGV7MfWAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_Phim.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Film.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAAA/CAYAAABQHc7KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABM
         5AAATOQBp4kScQAAABF0RVh0RGVzY3JpcHRpb24AUHJpbnQkxrTwAAAAIHRFWHRDcmVhdGlvblRpbWUA
@@ -489,7 +489,7 @@
         QmCC
 </value>
   </data>
-  <data name="btn_Suat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Schedule.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABM
         5AAATOQBp4kScQAAABF0RVh0RGVzY3JpcHRpb24AUHJpbnQkxrTwAAAAIHRFWHRDcmVhdGlvblRpbWUA

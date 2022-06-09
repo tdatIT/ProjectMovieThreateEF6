@@ -97,7 +97,7 @@ namespace LTWin_Last.View
 			{
 				if (ofd.ShowDialog() == DialogResult.OK)
 				{
-					ptb_Anh.Image = Image.FromFile(ofd.FileName);
+					pbx_Poster.Image = Image.FromFile(ofd.FileName);
 				}
 			}
 		}
