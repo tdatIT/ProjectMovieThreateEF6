@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_LT_Windows_EF6.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -103,7 +104,48 @@ namespace LTWin_Last.View
 		}
 		private void button1_Click(object sender, EventArgs e)
 		{
-			
+			string tenphim = txt_Name.Text;
+			string maphim = txt_ID.Text;
+			string theloai = txt_Category.Text;
+			double danhgia = double.Parse(txt_Rating.Text);
+			string mota = rtxt_Description.Text;
+			int thoiluong = Int16.Parse(txt_Minutes.Text);
+			byte[] img = ImageToByteArray(pbx_Poster.Image);
+			bool status = false;
+			if (rbtn_Yes.Checked)
+				status = true;
+			//get values from controls
+			using (var context = new MovieTheaterContext())
+			{
+				try
+				{
+					var film = new Movie
+					{
+						Id = maphim,
+						Name = tenphim,
+						Catagory = theloai,
+						Rating = danhgia,
+						Description = mota,
+						Status = status,
+						Poster = img,
+						Minutes = thoiluong
+					};
+					context.Movies.Add(film);
+					context.SaveChanges();
+					MessageBox.Show("Thêm vào thành công !!!", "Thông báo",
+						MessageBoxButtons.OK, MessageBoxIcon.Information);
+					Phim.DelegateUpdate();
+				}
+				catch (Exception)
+				{
+					MessageBox.Show("Kiểm tra lại dữ liệu !!!", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+			}
+		}
+
+		private void panel2_Paint(object sender, PaintEventArgs e)
+		{
+
 		}
 	}
 }
