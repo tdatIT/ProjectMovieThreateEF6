@@ -78,6 +78,7 @@ namespace LTWin_Last
             this.btn_Add.TabIndex = 31;
             this.btn_Add.Text = "Xác nhận";
             this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // year
             // 
