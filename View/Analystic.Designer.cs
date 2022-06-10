@@ -32,12 +32,6 @@ namespace LTWin_Last
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_Result = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Output = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -74,61 +68,12 @@ namespace LTWin_Last
             // dgv_Result
             // 
             this.dgv_Result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Result.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
             this.dgv_Result.Location = new System.Drawing.Point(31, 32);
             this.dgv_Result.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Result.Name = "dgv_Result";
             this.dgv_Result.RowHeadersWidth = 51;
             this.dgv_Result.Size = new System.Drawing.Size(875, 320);
             this.dgv_Result.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Column5";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Column6";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
             // 
             // btn_Output
             // 
@@ -184,8 +129,6 @@ namespace LTWin_Last
             this.cbx_Func.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_Func.Font = new System.Drawing.Font("Be Vietnam Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_Func.FormattingEnabled = true;
-            this.cbx_Func.Items.AddRange(new object[] {
-            "Quản lý nhân viên"});
             this.cbx_Func.Location = new System.Drawing.Point(411, 20);
             this.cbx_Func.Margin = new System.Windows.Forms.Padding(4);
             this.cbx_Func.Name = "cbx_Func";
@@ -234,12 +177,6 @@ namespace LTWin_Last
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.DataGridView dgv_Result;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
 		private System.Windows.Forms.Button btn_Output;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Panel panel3;
