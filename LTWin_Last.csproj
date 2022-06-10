@@ -137,11 +137,11 @@
     <Compile Include="View\BookingTicket.Designer.cs">
       <DependentUpon>BookingTicket.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Customer.cs">
+    <Compile Include="View\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="View\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\InitForm.cs">
       <SubType>Form</SubType>
@@ -193,8 +193,8 @@
     <EmbeddedResource Include="View\BookingTicket.resx">
       <DependentUpon>BookingTicket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="View\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\InitForm.resx">
       <DependentUpon>InitForm.cs</DependentUpon>
