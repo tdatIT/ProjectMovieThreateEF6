@@ -1,4 +1,4 @@
-﻿
+
 namespace LTWin_Last
 {
     partial class Analystic

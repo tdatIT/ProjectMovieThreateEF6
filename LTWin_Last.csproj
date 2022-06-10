@@ -108,6 +108,12 @@
     <Compile Include="View\Booking.Designer.cs">
       <DependentUpon>Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EmployeeMangerment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EmployeeMangerment.Designer.cs">
+      <DependentUpon>EmployeeMangerment.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FilmDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Booking.resx">
       <DependentUpon>Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EmployeeMangerment.resx">
+      <DependentUpon>EmployeeMangerment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FilmDetail.resx">
       <DependentUpon>FilmDetail.cs</DependentUpon>
