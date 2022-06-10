@@ -65,8 +65,8 @@ namespace LTWin_Last
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(67)))), ((int)(((byte)(128)))));
             this.panel1.Controls.Add(this.dgv_Result);
-            this.panel1.Location = new System.Drawing.Point(124, 165);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(120, 181);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(933, 385);
             this.panel1.TabIndex = 51;
@@ -82,7 +82,7 @@ namespace LTWin_Last
             this.Column5,
             this.Column6});
             this.dgv_Result.Location = new System.Drawing.Point(31, 32);
-            this.dgv_Result.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Result.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Result.Name = "dgv_Result";
             this.dgv_Result.RowHeadersWidth = 51;
             this.dgv_Result.Size = new System.Drawing.Size(875, 320);
@@ -147,7 +147,7 @@ namespace LTWin_Last
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1181, 58);
             this.panel2.TabIndex = 53;
@@ -160,7 +160,7 @@ namespace LTWin_Last
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 58);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1181, 71);
             this.panel3.TabIndex = 54;
@@ -172,7 +172,7 @@ namespace LTWin_Last
             this.btn_Search.Font = new System.Drawing.Font("Be Vietnam Pro", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(24)))), ((int)(((byte)(46)))));
             this.btn_Search.Location = new System.Drawing.Point(899, 17);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(53, 38);
             this.btn_Search.TabIndex = 2;
@@ -184,8 +184,10 @@ namespace LTWin_Last
             this.cbx_Func.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_Func.Font = new System.Drawing.Font("Be Vietnam Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_Func.FormattingEnabled = true;
+            this.cbx_Func.Items.AddRange(new object[] {
+            "Quản lý nhân viên"});
             this.cbx_Func.Location = new System.Drawing.Point(411, 20);
-            this.cbx_Func.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbx_Func.Margin = new System.Windows.Forms.Padding(4);
             this.cbx_Func.Name = "cbx_Func";
             this.cbx_Func.Size = new System.Drawing.Size(464, 32);
             this.cbx_Func.TabIndex = 1;
