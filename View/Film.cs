@@ -28,7 +28,6 @@ namespace LTWin_Last
 			ShowMovieInPanel();
 			DelegateUpdate = new UpdateMoivesData(GetDataMovies);
 			AddSourceIntoCbxSearch();
-
 		}
 	
         private void Form1_Load(object sender, EventArgs e)
