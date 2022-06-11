@@ -59,5 +59,10 @@ namespace LTWin_Last
 
            
         }
+
+        private void Add_Customercs_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

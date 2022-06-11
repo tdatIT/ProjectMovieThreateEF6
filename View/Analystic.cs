@@ -1,4 +1,5 @@
 ﻿using LTWin_Last.Controller;
+using LTWin_Last.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,5 +43,19 @@ namespace LTWin_Last
 		{
 			dgv_Result.DataSource = queryData.GetAllEmployee();
 		}
-	}
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+			string choice = cbx_Func.Text;
+			switch(choice)
+            {
+				case "Quản lý nhân viên":
+                    {
+						EmployeeMangerment employeee = new EmployeeMangerment();
+						employeee.Show();
+                    }
+					break;
+			}
+        }
+    }
 }
