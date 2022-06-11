@@ -46,7 +46,7 @@ namespace LTWin_Last
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.btn_Booking = new System.Windows.Forms.Button();
-			this.cbx_Search = new System.Windows.Forms.ComboBox();
+			this.txt_search = new System.Windows.Forms.TextBox();
 			this.panel5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgv_BookingTicket)).BeginInit();
 			this.SuspendLayout();
@@ -156,6 +156,38 @@ namespace LTWin_Last
 			// cbx_Day
 			// 
 			this.cbx_Day.FormattingEnabled = true;
+			this.cbx_Day.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
 			this.cbx_Day.Location = new System.Drawing.Point(54, 264);
 			this.cbx_Day.Name = "cbx_Day";
 			this.cbx_Day.Size = new System.Drawing.Size(47, 20);
@@ -164,6 +196,19 @@ namespace LTWin_Last
 			// cbx_Month
 			// 
 			this.cbx_Month.FormattingEnabled = true;
+			this.cbx_Month.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
 			this.cbx_Month.Location = new System.Drawing.Point(111, 264);
 			this.cbx_Month.Name = "cbx_Month";
 			this.cbx_Month.Size = new System.Drawing.Size(47, 20);
@@ -172,6 +217,12 @@ namespace LTWin_Last
 			// cbx_Year
 			// 
 			this.cbx_Year.FormattingEnabled = true;
+			this.cbx_Year.Items.AddRange(new object[] {
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022"});
 			this.cbx_Year.Location = new System.Drawing.Point(173, 264);
 			this.cbx_Year.Name = "cbx_Year";
 			this.cbx_Year.Size = new System.Drawing.Size(60, 20);
@@ -228,14 +279,13 @@ namespace LTWin_Last
 			this.btn_Booking.UseVisualStyleBackColor = false;
 			this.btn_Booking.Click += new System.EventHandler(this.button1_Click_1);
 			// 
-			// cbx_Search
+			// txt_search
 			// 
-			this.cbx_Search.Font = new System.Drawing.Font("Be Vietnam Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.cbx_Search.FormattingEnabled = true;
-			this.cbx_Search.Location = new System.Drawing.Point(498, 76);
-			this.cbx_Search.Name = "cbx_Search";
-			this.cbx_Search.Size = new System.Drawing.Size(309, 27);
-			this.cbx_Search.TabIndex = 48;
+			this.txt_search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+			this.txt_search.Location = new System.Drawing.Point(532, 81);
+			this.txt_search.Name = "txt_search";
+			this.txt_search.Size = new System.Drawing.Size(278, 21);
+			this.txt_search.TabIndex = 48;
 			// 
 			// Book
 			// 
@@ -243,7 +293,7 @@ namespace LTWin_Last
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
 			this.ClientSize = new System.Drawing.Size(886, 530);
-			this.Controls.Add(this.cbx_Search);
+			this.Controls.Add(this.txt_search);
 			this.Controls.Add(this.btn_Booking);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
@@ -281,10 +331,10 @@ namespace LTWin_Last
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button btn_Booking;
-		private System.Windows.Forms.ComboBox cbx_Search;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+		private System.Windows.Forms.TextBox txt_search;
 	}
 }

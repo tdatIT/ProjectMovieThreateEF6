@@ -78,6 +78,7 @@ namespace LTWin_Last
             this.btn_Add.TabIndex = 31;
             this.btn_Add.Text = "Xác nhận";
             this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // year
             // 
@@ -248,6 +249,7 @@ namespace LTWin_Last
             this.Name = "Add_Customercs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Customercs";
+            this.Load += new System.EventHandler(this.Add_Customercs_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

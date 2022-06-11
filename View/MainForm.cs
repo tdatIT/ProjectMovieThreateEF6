@@ -76,7 +76,7 @@ namespace LTWin_Last
 
         private void btn_KH_Click(object sender, EventArgs e)
         {
-            openChildForm(new Customer(), sender);
+            openChildForm(new CustomerForm(), sender);
 			lbl_Title.Text = "KHÁCH HÀNG";
 		}
 
