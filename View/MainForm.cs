@@ -176,5 +176,10 @@ namespace LTWin_Last
 		{
 
 		}
-	}
+
+        private void lb_Time_Click_1(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
