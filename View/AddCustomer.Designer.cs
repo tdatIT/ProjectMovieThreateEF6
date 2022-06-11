@@ -249,6 +249,7 @@ namespace LTWin_Last
             this.Name = "Add_Customercs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Customercs";
+            this.Load += new System.EventHandler(this.Add_Customercs_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
