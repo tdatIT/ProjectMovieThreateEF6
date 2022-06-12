@@ -74,6 +74,7 @@ namespace LTWin_Last
             this.btn_Add.TabIndex = 34;
             this.btn_Add.Text = "Thêm";
             this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // panel1
             // 

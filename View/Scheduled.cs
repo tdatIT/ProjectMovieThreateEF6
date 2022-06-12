@@ -53,5 +53,10 @@ namespace LTWin_Last
 			dgv_Schedule.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(3, 33, 59);
 			dgv_Schedule.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 		}
-	}
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

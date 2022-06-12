@@ -84,5 +84,10 @@ namespace LTWin_Last
 			BookingTicket bookingTicket = new BookingTicket();
 			bookingTicket.Visible = true;
 		}
-	}
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

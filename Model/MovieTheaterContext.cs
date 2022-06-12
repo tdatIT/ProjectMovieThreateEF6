@@ -44,7 +44,6 @@ namespace Project_LT_Windows_EF6.Model
 				.HasMany<Ticket>(t => t.tickets)
 				.WithRequired(s => s.scheduledMovie)
 				.HasForeignKey(g => g.ScheduledMovideId);
-
 		}
 	}
 }

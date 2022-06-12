@@ -176,5 +176,10 @@ namespace LTWin_Last
 		{
 
 		}
-	}
+
+        private void webView21_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

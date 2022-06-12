@@ -36,5 +36,10 @@ namespace LTWin_Last.View
         {
             btn_A0.BackColor = Color.Yellow;
         }
+
+        private void bnt_Booking_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

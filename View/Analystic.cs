@@ -38,7 +38,6 @@ namespace LTWin_Last
 			}
 			
 		}
-
 		private void Analystic_Load(object sender, EventArgs e)
 		{
 			dgv_Result.DataSource = queryData.GetAllEmployee();

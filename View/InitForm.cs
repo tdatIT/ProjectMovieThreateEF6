@@ -52,5 +52,10 @@ namespace LTWin_Last.View
 				}
 			}
 		}
-	}
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
