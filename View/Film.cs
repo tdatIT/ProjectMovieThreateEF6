@@ -14,14 +14,14 @@ using System.Windows.Forms;
 namespace LTWin_Last
 {
 	public delegate void UpdateMoivesData();
-    public partial class Phim : Form
+    public partial class FilmForm : Form
     {
 		public static UpdateMoivesData DelegateUpdate;	
 		private List<Movie> movies;
 		private Movie movieSelected;
 		private int index = 0;
 
-        public Phim()
+        public FilmForm()
         {
             InitializeComponent();
 			GetDataMovies();
@@ -92,7 +92,7 @@ namespace LTWin_Last
 
 		private void button5_Click(object sender, EventArgs e)
 		{
-			frm_ChiTietPhim frm_ChiTietPhim = new frm_ChiTietPhim(movieSelected);
+			FilmDetailForm frm_ChiTietPhim = new FilmDetailForm(movieSelected);
 			frm_ChiTietPhim.Show();
 		}
 

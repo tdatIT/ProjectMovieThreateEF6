@@ -82,7 +82,7 @@ namespace LTWin_Last
 
         private void btn_Phim_Click(object sender, EventArgs e)
         {
-            openChildForm(new Phim(), sender);
+            openChildForm(new FilmForm(), sender);
 			lbl_Title.Text = "PHIM";
 
 		}
@@ -151,7 +151,7 @@ namespace LTWin_Last
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			AddSuat addSuat = new AddSuat();
+			AddUpScheduled addSuat = new AddUpScheduled();
 			addSuat.Visible = true;
 		}
 

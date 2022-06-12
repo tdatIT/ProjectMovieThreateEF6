@@ -17,11 +17,13 @@ namespace LTWin_Last.View
     public partial class EmployeeMangerment : Form
     {
         private QueryData queryData;
+		private WriteFileExcel fileExcel;
         public static int request;
         public EmployeeMangerment()
         {
             InitializeComponent();
             queryData = new QueryData();
+			fileExcel = new WriteFileExcel();
         }
 
         private void EmployeeMangerment_Load(object sender, EventArgs e)
@@ -205,11 +207,6 @@ namespace LTWin_Last.View
                 case 3:
                     {
                         DateTime birth = DateTime.Parse(txt_Birthday.Text);
-                        bool sex = false;
-                        if (rbtn_Nam.Checked)
-                        {
-                            sex = true;
-                        }
                         using (var context = new MovieTheaterContext())
                         {
                             try
@@ -256,5 +253,19 @@ namespace LTWin_Last.View
             request =  3;
             Enable_save_cancel();
         }
-    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			saveFileDialog1.Filter = "Excel File(*.xlsx)|*.xlsx|All files (*.*)|*.*";
+			if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+			{
+				fileExcel.WriteToExcel(dgv, saveFileDialog1.FileName);
+			}
+		}
+
+		private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+	}
 }

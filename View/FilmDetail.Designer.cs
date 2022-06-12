@@ -1,7 +1,7 @@
 ﻿
 namespace LTWin_Last
 {
-    partial class frm_ChiTietPhim
+    partial class FilmDetailForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,11 @@ namespace LTWin_Last
         /// </summary>
         private void InitializeComponent()
         {
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ChiTietPhim));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilmDetailForm));
 			this.label7 = new System.Windows.Forms.Label();
 			this.btn_update = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.button1 = new System.Windows.Forms.Button();
 			this.rbtn_Yes = new System.Windows.Forms.RadioButton();
 			this.rbtn_No = new System.Windows.Forms.RadioButton();
 			this.label1 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@ namespace LTWin_Last
 			this.label13 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pbx_Poster)).BeginInit();
 			this.SuspendLayout();
@@ -73,7 +73,7 @@ namespace LTWin_Last
 			this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_update.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.btn_update.Location = new System.Drawing.Point(454, 402);
-			this.btn_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btn_update.Margin = new System.Windows.Forms.Padding(2);
 			this.btn_update.Name = "btn_update";
 			this.btn_update.Size = new System.Drawing.Size(189, 33);
 			this.btn_update.TabIndex = 42;
@@ -107,6 +107,19 @@ namespace LTWin_Last
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(702, 418);
 			this.panel1.TabIndex = 43;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.Aqua;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Location = new System.Drawing.Point(477, 355);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(116, 43);
+			this.button1.TabIndex = 24;
+			this.button1.Text = "Cập nhật";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// rbtn_Yes
 			// 
@@ -289,20 +302,7 @@ namespace LTWin_Last
 			this.label9.TabIndex = 0;
 			this.label9.Text = "Mã phim";
 			// 
-			// button1
-			// 
-			this.button1.BackColor = System.Drawing.Color.Aqua;
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Location = new System.Drawing.Point(477, 355);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(116, 43);
-			this.button1.TabIndex = 24;
-			this.button1.Text = "Cập nhật";
-			this.button1.UseVisualStyleBackColor = false;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// frm_ChiTietPhim
+			// FilmDetailForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -311,8 +311,8 @@ namespace LTWin_Last
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.btn_update);
 			this.Controls.Add(this.label7);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.Name = "frm_ChiTietPhim";
+			this.Margin = new System.Windows.Forms.Padding(2);
+			this.Name = "FilmDetailForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Chi tiết phim";
 			this.Load += new System.EventHandler(this.frm_ChiTietPhim_Load);

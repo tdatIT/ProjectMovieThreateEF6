@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace LTWin_Last
 {
-	public partial class frm_ChiTietPhim : Form
+	public partial class FilmDetailForm : Form
 	{
 		private Movie mvEdit;
-		public frm_ChiTietPhim(Movie movieSelected)
+		public FilmDetailForm(Movie movieSelected)
 		{
 			InitializeComponent();
 			mvEdit = movieSelected;
@@ -74,7 +74,7 @@ namespace LTWin_Last
 						context.SaveChanges();
 						MessageBox.Show("Cập nhật thành công !!!", "Thông báo",
 							MessageBoxButtons.OK, MessageBoxIcon.Information);
-						Phim.DelegateUpdate();
+						FilmForm.DelegateUpdate();
 					}
 					catch (Exception)
 					{

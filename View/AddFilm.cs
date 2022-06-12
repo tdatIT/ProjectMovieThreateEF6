@@ -134,7 +134,7 @@ namespace LTWin_Last.View
 					context.SaveChanges();
 					MessageBox.Show("Thêm vào thành công !!!", "Thông báo",
 						MessageBoxButtons.OK, MessageBoxIcon.Information);
-					Phim.DelegateUpdate();
+					FilmForm.DelegateUpdate();
 				}
 				catch (Exception)
 				{

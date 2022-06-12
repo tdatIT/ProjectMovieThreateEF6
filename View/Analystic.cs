@@ -41,7 +41,7 @@ namespace LTWin_Last
 
 		private void Analystic_Load(object sender, EventArgs e)
 		{
-			dgv_Result.DataSource = queryData.GetAllEmployee();
+			cbx_Func.SelectedIndex = 0;
 		}
 
         private void btn_Search_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using LTWin_Last.View;
+﻿using LTWin_Last.Controller;
+using LTWin_Last.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,12 @@ namespace LTWin_Last
 {
     public partial class Book : Form
     {
-        public Book()
+		private QueryData query;
+		public Book()
         {
             InitializeComponent();
 			initStyleDataGridView();
+			query = new QueryData();
         }
 		void initStyleDataGridView()
 		{
@@ -41,7 +44,7 @@ namespace LTWin_Last
 
         private void Book_Load(object sender, EventArgs e)
         {
-
+			dgv_BookingTicket.DataSource = query.GetDataFilmAndScheduled(DateTime.Now);
         }
 
         private void button2_Click(object sender, EventArgs e)
