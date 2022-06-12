@@ -14,9 +14,10 @@ namespace Project_LT_Windows_EF6.Model
 		[Key]
 		public int Id { get; set; }
 
-		//Field: No_seat INT NOT NULL
+		//Field: No_seat VARCHAR(5) NOT NULL
 		[Required]
-		public int No_seat { get; set; }
+		[MaxLength(5)]
+		public string No_seat { get; set; }
 
 		//Field: Price DOUBLE NOT NULL
 		[Required]

@@ -1,4 +1,5 @@
-﻿using Project_LT_Windows_EF6.Model;
+﻿using LTWin_Last.Model;
+using Project_LT_Windows_EF6.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace LTWin_Last.Controller
 {
 	public class QueryData
 	{
+		const int MAXSEATS = 32;
 		public IList<Room> GetRoomData()
 		{
 			using (MovieTheaterContext context = new MovieTheaterContext())
@@ -26,7 +28,7 @@ namespace LTWin_Last.Controller
 					return null;
 				}
 			}
-			
+
 		}
 		public IList<Movie> GetFilmAvailable()
 		{
@@ -34,7 +36,7 @@ namespace LTWin_Last.Controller
 			{
 				try
 				{
-					var roomIdList = context.Movies.Where(u=>u.Status==true).ToList();
+					var roomIdList = context.Movies.Where(u => u.Status == true).ToList();
 					return roomIdList;
 				}
 				catch (Exception ex)
@@ -47,43 +49,47 @@ namespace LTWin_Last.Controller
 		}
 		public IList GetDataFilmAndScheduled(DateTime curTime)
 		{
-			using(MovieTheaterContext context = new MovieTheaterContext())
+			using (MovieTheaterContext context = new MovieTheaterContext())
 			{
 				DateTime nextday = curTime.AddDays(1);
 				var dataSchedule = from i in context.ScheduledMovies
-						   join j in context.Movies on i.MovieId equals j.Id
-						   where i.Begindate >=curTime && i.Begindate<=nextday
-						   select new
-						   {
-							   j.Name,
-							   i.Begindate,
-							   i.Id
-						   } into info
-						   select info;
+								   join j in context.Movies on i.MovieId equals j.Id
+								   where i.Begindate >= curTime && i.Begindate <= nextday
+								   select new
+								   {
+									   j.Name,
+									   i.Begindate,
+									   i.Id,
+									   avalibleS=30
+								   } into info
+								   select info;
 
 				var noseat = from i in context.Tickets
 							 group i by i.ScheduledMovideId into scheduleId
-							 select new { scheduleId.Key, countSeats = 30 - scheduleId.Count() };
+							 select new { scheduleId.Key, countSeats= scheduleId.Count() };
 
 				var data = from u in dataSchedule
-						   join v in noseat on u.Id equals v.Key
+						   join v in noseat on u.Id equals v.Key into snt
+						   from i in snt.DefaultIfEmpty()
 						   select new
 						   {
 							   u.Name,
 							   u.Begindate,
-							   v.countSeats,
-							   v.Key
-						   };
-				return dataSchedule.ToList();
-			}
+							   u.Id,
+							   countS = i.Key == null ? MAXSEATS:u.avalibleS
+							};
+				return data.ToList();
+			};
+		
 		}
+
 		public bool DeleteCustomerUseTrans(Customer cs)
 		{
 			return true;
 		}
 		public List<Employee> GetAllEmployee()
 		{
-			using (MovieTheaterContext dbcontext =new MovieTheaterContext())
+			using (MovieTheaterContext dbcontext = new MovieTheaterContext())
 			{
 				var data = dbcontext.Employees.ToList();
 				return data;
@@ -92,6 +98,25 @@ namespace LTWin_Last.Controller
 		public bool DelScheduledByTrans()
 		{
 			return true;
+		}
+		public List<ENoSeats> NoSeatsNotAva(int id)
+		{
+			using (var context = new MovieTheaterContext())
+			{
+				var list = context.Tickets.Where(t => t.ScheduledMovideId == id).Select(u => u.No_seat).ToList();
+				List<ENoSeats> lstSeats = null;
+				if (list!=null)
+				{
+					lstSeats = new List<ENoSeats>();
+					ENoSeats seats;
+					foreach (string i in list)
+					{
+						Enum.TryParse(i, out seats);
+						lstSeats.Add(seats);
+					}
+				}
+				return lstSeats;
+			}
 		}
 	}
 }

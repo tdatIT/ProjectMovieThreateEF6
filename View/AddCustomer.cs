@@ -53,7 +53,8 @@ namespace LTWin_Last
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Kiểm tra lại dữ liệu !!!", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Kiểm tra lại dữ liệu !!!", "Thất bại", 
+						MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

@@ -1,5 +1,6 @@
 ﻿using LTWin_Last.Controller;
 using LTWin_Last.View;
+using Project_LT_Windows_EF6.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace LTWin_Last
     public partial class Book : Form
     {
 		private QueryData query;
+		private ScheduledMovie scheduled=null;
+
 		public Book()
         {
             InitializeComponent();
@@ -44,8 +47,12 @@ namespace LTWin_Last
 
         private void Book_Load(object sender, EventArgs e)
         {
-			dgv_BookingTicket.DataSource = query.GetDataFilmAndScheduled(DateTime.Now);
-        }
+			DateTime getNow = DateTime.Now;
+			cbx_Day.Text = getNow.ToString("dd");
+			cbx_Month.Text = getNow.ToString("MM");
+			cbx_Year.Text = getNow.ToString("yyyy");
+			button1_Click_2(sender, e);
+		}
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -84,8 +91,45 @@ namespace LTWin_Last
 
 		private void button1_Click_1(object sender, EventArgs e)
 		{
-			BookingTicket bookingTicket = new BookingTicket();
-			bookingTicket.Visible = true;
+			string sdt = txt_C_phone_number.Text ;
+			if (scheduled != null && sdt != "")
+			{
+				BookingTicket bookingTicket = new BookingTicket(scheduled,sdt);
+				bookingTicket.Show();
+			}
+			else
+				MessageBox.Show("Vui lòng chọn suất chiếu hoặc số điện thoại", "Thông báo",
+					MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+		}
+
+		private void button1_Click_2(object sender, EventArgs e)
+		{
+			try
+			{
+				string date = cbx_Year.Text + "-" + cbx_Month.Text +"-"+ cbx_Day.Text;
+				DateTime dateFilter = DateTime.Parse(date);
+				dgv_BookingTicket.DataSource = query.GetDataFilmAndScheduled(dateFilter);
+			}
+			catch (Exception)
+			{
+				MessageBox.Show("Kiểm tra lại ngày tháng !!!", "Thất bại", 
+					MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void dgv_BookingTicket_CellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			if (e.RowIndex >= 0)
+			{
+				DataGridViewRow row = dgv_BookingTicket.Rows[e.RowIndex];
+				int id = (int)row.Cells[3].Value;
+				using (var context = new MovieTheaterContext())
+				{
+					scheduled = context.ScheduledMovies.Find(id);
+				}
+			}
+			
 		}
 	}
 }

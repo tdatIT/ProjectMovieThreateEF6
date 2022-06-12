@@ -31,6 +31,10 @@ namespace LTWin_Last
         {
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.dgv_BookingTicket = new System.Windows.Forms.DataGridView();
+			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.label7 = new System.Windows.Forms.Label();
 			this.txt_C_phone_number = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -43,10 +47,7 @@ namespace LTWin_Last
 			this.label5 = new System.Windows.Forms.Label();
 			this.btn_Booking = new System.Windows.Forms.Button();
 			this.txt_search = new System.Windows.Forms.TextBox();
-			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.button1 = new System.Windows.Forms.Button();
 			this.panel5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgv_BookingTicket)).BeginInit();
 			this.SuspendLayout();
@@ -76,6 +77,44 @@ namespace LTWin_Last
 			this.dgv_BookingTicket.RowHeadersWidth = 51;
 			this.dgv_BookingTicket.Size = new System.Drawing.Size(540, 298);
 			this.dgv_BookingTicket.TabIndex = 0;
+			this.dgv_BookingTicket.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_BookingTicket_CellClick);
+			// 
+			// Column1
+			// 
+			this.Column1.DataPropertyName = "Name";
+			this.Column1.HeaderText = "Tên Phim";
+			this.Column1.MinimumWidth = 6;
+			this.Column1.Name = "Column1";
+			this.Column1.ReadOnly = true;
+			this.Column1.Width = 250;
+			// 
+			// Column2
+			// 
+			this.Column2.DataPropertyName = "BeginDate";
+			this.Column2.FillWeight = 150F;
+			this.Column2.HeaderText = "Giờ chiếu";
+			this.Column2.MinimumWidth = 6;
+			this.Column2.Name = "Column2";
+			this.Column2.ReadOnly = true;
+			this.Column2.Width = 125;
+			// 
+			// Column3
+			// 
+			this.Column3.DataPropertyName = "countSeats";
+			this.Column3.HeaderText = "Ghế trống";
+			this.Column3.MinimumWidth = 6;
+			this.Column3.Name = "Column3";
+			this.Column3.ReadOnly = true;
+			this.Column3.Width = 80;
+			// 
+			// Column4
+			// 
+			this.Column4.DataPropertyName = "Id";
+			this.Column4.HeaderText = "ID SC";
+			this.Column4.MinimumWidth = 6;
+			this.Column4.Name = "Column4";
+			this.Column4.ReadOnly = true;
+			this.Column4.Width = 50;
 			// 
 			// label7
 			// 
@@ -91,9 +130,10 @@ namespace LTWin_Last
 			// 
 			// txt_C_phone_number
 			// 
+			this.txt_C_phone_number.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_C_phone_number.Location = new System.Drawing.Point(54, 198);
 			this.txt_C_phone_number.Name = "txt_C_phone_number";
-			this.txt_C_phone_number.Size = new System.Drawing.Size(179, 21);
+			this.txt_C_phone_number.Size = new System.Drawing.Size(179, 25);
 			this.txt_C_phone_number.TabIndex = 37;
 			// 
 			// label1
@@ -122,6 +162,7 @@ namespace LTWin_Last
 			// 
 			// cbx_Day
 			// 
+			this.cbx_Day.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbx_Day.FormattingEnabled = true;
 			this.cbx_Day.Items.AddRange(new object[] {
             "1",
@@ -157,11 +198,12 @@ namespace LTWin_Last
             "31"});
 			this.cbx_Day.Location = new System.Drawing.Point(54, 264);
 			this.cbx_Day.Name = "cbx_Day";
-			this.cbx_Day.Size = new System.Drawing.Size(47, 20);
+			this.cbx_Day.Size = new System.Drawing.Size(47, 25);
 			this.cbx_Day.TabIndex = 41;
 			// 
 			// cbx_Month
 			// 
+			this.cbx_Month.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbx_Month.FormattingEnabled = true;
 			this.cbx_Month.Items.AddRange(new object[] {
             "01",
@@ -178,11 +220,12 @@ namespace LTWin_Last
             "12"});
 			this.cbx_Month.Location = new System.Drawing.Point(111, 264);
 			this.cbx_Month.Name = "cbx_Month";
-			this.cbx_Month.Size = new System.Drawing.Size(47, 20);
+			this.cbx_Month.Size = new System.Drawing.Size(47, 25);
 			this.cbx_Month.TabIndex = 42;
 			// 
 			// cbx_Year
 			// 
+			this.cbx_Year.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbx_Year.FormattingEnabled = true;
 			this.cbx_Year.Items.AddRange(new object[] {
             "2018",
@@ -192,7 +235,7 @@ namespace LTWin_Last
             "2022"});
 			this.cbx_Year.Location = new System.Drawing.Point(173, 264);
 			this.cbx_Year.Name = "cbx_Year";
-			this.cbx_Year.Size = new System.Drawing.Size(60, 20);
+			this.cbx_Year.Size = new System.Drawing.Size(60, 25);
 			this.cbx_Year.TabIndex = 43;
 			// 
 			// label3
@@ -213,7 +256,7 @@ namespace LTWin_Last
 			this.label4.BackColor = System.Drawing.Color.Transparent;
 			this.label4.Font = new System.Drawing.Font("Open Sans Condensed", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label4.ForeColor = System.Drawing.Color.Transparent;
-			this.label4.Location = new System.Drawing.Point(50, 313);
+			this.label4.Location = new System.Drawing.Point(50, 338);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(106, 38);
 			this.label4.TabIndex = 45;
@@ -238,7 +281,7 @@ namespace LTWin_Last
 			this.btn_Booking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btn_Booking.Font = new System.Drawing.Font("Be Vietnam Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_Booking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
-			this.btn_Booking.Location = new System.Drawing.Point(54, 378);
+			this.btn_Booking.Location = new System.Drawing.Point(54, 403);
 			this.btn_Booking.Name = "btn_Booking";
 			this.btn_Booking.Size = new System.Drawing.Size(179, 36);
 			this.btn_Booking.TabIndex = 47;
@@ -254,42 +297,20 @@ namespace LTWin_Last
 			this.txt_search.Size = new System.Drawing.Size(278, 21);
 			this.txt_search.TabIndex = 48;
 			// 
-			// Column1
+			// button1
 			// 
-			this.Column1.DataPropertyName = "Name";
-			this.Column1.HeaderText = "Tên Phim";
-			this.Column1.MinimumWidth = 6;
-			this.Column1.Name = "Column1";
-			this.Column1.ReadOnly = true;
-			this.Column1.Width = 250;
-			// 
-			// Column2
-			// 
-			this.Column2.DataPropertyName = "BeginDate";
-			this.Column2.FillWeight = 150F;
-			this.Column2.HeaderText = "Giờ chiếu";
-			this.Column2.MinimumWidth = 6;
-			this.Column2.Name = "Column2";
-			this.Column2.ReadOnly = true;
-			this.Column2.Width = 125;
-			// 
-			// Column3
-			// 
-			this.Column3.DataPropertyName = "countSeats";
-			this.Column3.HeaderText = "Ghế trống";
-			this.Column3.MinimumWidth = 6;
-			this.Column3.Name = "Column3";
-			this.Column3.ReadOnly = true;
-			this.Column3.Width = 80;
-			// 
-			// Column4
-			// 
-			this.Column4.DataPropertyName = "Key";
-			this.Column4.HeaderText = "ID SC";
-			this.Column4.MinimumWidth = 6;
-			this.Column4.Name = "Column4";
-			this.Column4.ReadOnly = true;
-			this.Column4.Width = 50;
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(180)))), ((int)(((byte)(69)))));
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Be Vietnam Pro", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
+			this.button1.Location = new System.Drawing.Point(54, 300);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(179, 26);
+			this.button1.TabIndex = 49;
+			this.button1.Text = "Lọc theo ngày";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click_2);
 			// 
 			// Book
 			// 
@@ -297,6 +318,7 @@ namespace LTWin_Last
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
 			this.ClientSize = new System.Drawing.Size(886, 530);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.txt_search);
 			this.Controls.Add(this.btn_Booking);
 			this.Controls.Add(this.label5);
@@ -336,6 +358,7 @@ namespace LTWin_Last
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button btn_Booking;
 		private System.Windows.Forms.TextBox txt_search;
+		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
