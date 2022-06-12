@@ -12,7 +12,7 @@ namespace LTWin_Last.Controller
 {
 	public class QueryData
 	{
-		const int MAXSEATS = 32;
+		const int MAXSEATS = 30;
 		public IList<Room> GetRoomData()
 		{
 			using (MovieTheaterContext context = new MovieTheaterContext())
@@ -76,7 +76,7 @@ namespace LTWin_Last.Controller
 							   u.Name,
 							   u.Begindate,
 							   u.Id,
-							   countS = i.Key == null ? MAXSEATS:u.avalibleS
+							   seats = i.Key == null ? MAXSEATS:u.avalibleS-i.countSeats
 							};
 				return data.ToList();
 			};

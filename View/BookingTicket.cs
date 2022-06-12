@@ -123,7 +123,7 @@ namespace LTWin_Last
 			if (e.RowIndex >= 0)
 			{
 				DataGridViewRow row = dgv_BookingTicket.Rows[e.RowIndex];
-				int id = (int)row.Cells[3].Value;
+				int id = (int)row.Cells[2].Value;
 				using (var context = new MovieTheaterContext())
 				{
 					scheduled = context.ScheduledMovies.Find(id);
