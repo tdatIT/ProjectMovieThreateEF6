@@ -85,7 +85,7 @@ namespace LTWin_Last
             this.panel3.Controls.Add(this.txt_search);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1181, 96);
             this.panel3.TabIndex = 44;
@@ -132,7 +132,7 @@ namespace LTWin_Last
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(67)))), ((int)(((byte)(128)))));
             this.panel1.Controls.Add(this.dgv_Schedule);
             this.panel1.Location = new System.Drawing.Point(129, 144);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(933, 374);
             this.panel1.TabIndex = 45;
@@ -148,11 +148,13 @@ namespace LTWin_Last
             this.Column5,
             this.Column6});
             this.dgv_Schedule.Location = new System.Drawing.Point(31, 32);
-            this.dgv_Schedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Schedule.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Schedule.Name = "dgv_Schedule";
             this.dgv_Schedule.RowHeadersWidth = 51;
             this.dgv_Schedule.Size = new System.Drawing.Size(875, 320);
             this.dgv_Schedule.TabIndex = 0;
+            this.dgv_Schedule.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CellClick_Schedule);
+            this.dgv_Schedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Schedule_CellContentClick);
             // 
             // Column1
             // 

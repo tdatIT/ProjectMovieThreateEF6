@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace LTWin_Last
 {
+
     public partial class Suat : Form
     {
         public Suat()
@@ -17,6 +18,7 @@ namespace LTWin_Last
             InitializeComponent();
         }
 
+    
         private void button1_Click(object sender, EventArgs e)
         {
             AddSuat addSuat = new AddSuat();
@@ -55,6 +57,25 @@ namespace LTWin_Last
 		}
 
         private void btn_Update_Click(object sender, EventArgs e)
+        {
+			
+        }
+
+        public void CellClick_Schedule(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgv_Schedule.Rows[e.RowIndex];
+                string ID=  row.Cells[0].Value.ToString();
+                String Schedule = row.Cells[2].Value.ToString();
+                string IdFim= row.Cells[3].Value.ToString();
+                string Room = row.Cells[4].Value.ToString();
+            }
+
+        }
+
+        private void dgv_Schedule_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

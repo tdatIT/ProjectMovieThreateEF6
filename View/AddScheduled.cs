@@ -21,5 +21,10 @@ namespace LTWin_Last
         {
 
         }
+
+        private void AddSuat_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

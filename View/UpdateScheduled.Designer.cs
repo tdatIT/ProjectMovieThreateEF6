@@ -1,7 +1,7 @@
 ﻿
-namespace LTWin_Last
+namespace LTWin_Last.View
 {
-    partial class AddSuat
+    partial class UpdateScheduled
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,13 @@ namespace LTWin_Last
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.btn_Add = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.cbx_Schedule = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.start_year = new System.Windows.Forms.TextBox();
-            this.start_month = new System.Windows.Forms.TextBox();
-            this.start_day = new System.Windows.Forms.TextBox();
             this.txt_MovieID = new System.Windows.Forms.TextBox();
+            this.btn_Update = new System.Windows.Forms.Button();
             this.txt_RoomID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,11 +43,32 @@ namespace LTWin_Last
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_Day = new System.Windows.Forms.TextBox();
+            this.txt_Month = new System.Windows.Forms.TextBox();
+            this.txt_Year = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(33)))), ((int)(((byte)(59)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 516);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(563, 31);
+            this.panel3.TabIndex = 41;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(33)))), ((int)(((byte)(59)))));
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(563, 69);
+            this.panel2.TabIndex = 40;
             // 
             // label9
             // 
@@ -57,46 +76,11 @@ namespace LTWin_Last
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(153, 9);
+            this.label9.Location = new System.Drawing.Point(121, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(274, 45);
+            this.label9.Size = new System.Drawing.Size(335, 45);
             this.label9.TabIndex = 33;
-            this.label9.Text = "Thêm Suất Chiếu";
-            // 
-            // btn_Add
-            // 
-            this.btn_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(169)))), ((int)(((byte)(67)))));
-            this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_Add.Location = new System.Drawing.Point(217, 474);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(127, 48);
-            this.btn_Add.TabIndex = 34;
-            this.btn_Add.Text = "Thêm";
-            this.btn_Add.UseVisualStyleBackColor = false;
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.cbx_Schedule);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.start_year);
-            this.panel1.Controls.Add(this.start_month);
-            this.panel1.Controls.Add(this.start_day);
-            this.panel1.Controls.Add(this.txt_MovieID);
-            this.panel1.Controls.Add(this.txt_RoomID);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txt_ID);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.Location = new System.Drawing.Point(63, 110);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(462, 346);
-            this.panel1.TabIndex = 35;
+            this.label9.Text = "Cập Nhật Suất Chiếu";
             // 
             // cbx_Schedule
             // 
@@ -132,30 +116,6 @@ namespace LTWin_Last
             this.label6.TabIndex = 41;
             this.label6.Text = "Ngày chiếu";
             // 
-            // start_year
-            // 
-            this.start_year.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start_year.Location = new System.Drawing.Point(347, 103);
-            this.start_year.Name = "start_year";
-            this.start_year.Size = new System.Drawing.Size(59, 30);
-            this.start_year.TabIndex = 40;
-            // 
-            // start_month
-            // 
-            this.start_month.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start_month.Location = new System.Drawing.Point(295, 103);
-            this.start_month.Name = "start_month";
-            this.start_month.Size = new System.Drawing.Size(31, 30);
-            this.start_month.TabIndex = 39;
-            // 
-            // start_day
-            // 
-            this.start_day.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start_day.Location = new System.Drawing.Point(232, 103);
-            this.start_day.Name = "start_day";
-            this.start_day.Size = new System.Drawing.Size(39, 30);
-            this.start_day.TabIndex = 38;
-            // 
             // txt_MovieID
             // 
             this.txt_MovieID.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,6 +123,19 @@ namespace LTWin_Last
             this.txt_MovieID.Name = "txt_MovieID";
             this.txt_MovieID.Size = new System.Drawing.Size(174, 30);
             this.txt_MovieID.TabIndex = 36;
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(169)))), ((int)(((byte)(67)))));
+            this.btn_Update.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Update.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Update.Location = new System.Drawing.Point(217, 438);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(127, 48);
+            this.btn_Update.TabIndex = 38;
+            this.btn_Update.Text = "Cập Nhật";
+            this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // txt_RoomID
             // 
@@ -201,6 +174,7 @@ namespace LTWin_Last
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.Size = new System.Drawing.Size(174, 30);
             this.txt_ID.TabIndex = 8;
+            this.txt_ID.TextChanged += new System.EventHandler(this.txt_ID_TextChanged);
             // 
             // label8
             // 
@@ -235,66 +209,96 @@ namespace LTWin_Last
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã suất chiếu";
             // 
-            // panel2
+            // panel1
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(33)))), ((int)(((byte)(59)))));
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(592, 69);
-            this.panel2.TabIndex = 36;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cbx_Schedule);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txt_MovieID);
+            this.panel1.Controls.Add(this.txt_RoomID);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txt_Year);
+            this.panel1.Controls.Add(this.txt_Month);
+            this.panel1.Controls.Add(this.txt_Day);
+            this.panel1.Controls.Add(this.txt_ID);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.Location = new System.Drawing.Point(63, 74);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(462, 346);
+            this.panel1.TabIndex = 39;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel3
+            // txt_Day
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(33)))), ((int)(((byte)(59)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 548);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(592, 31);
-            this.panel3.TabIndex = 37;
+            this.txt_Day.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Day.Location = new System.Drawing.Point(232, 99);
+            this.txt_Day.Name = "txt_Day";
+            this.txt_Day.Size = new System.Drawing.Size(40, 30);
+            this.txt_Day.TabIndex = 8;
+            this.txt_Day.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // AddSuat
+            // txt_Month
+            // 
+            this.txt_Month.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Month.Location = new System.Drawing.Point(289, 99);
+            this.txt_Month.Name = "txt_Month";
+            this.txt_Month.Size = new System.Drawing.Size(40, 30);
+            this.txt_Month.TabIndex = 8;
+            this.txt_Month.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // txt_Year
+            // 
+            this.txt_Year.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Year.Location = new System.Drawing.Point(349, 99);
+            this.txt_Year.Name = "txt_Year";
+            this.txt_Year.Size = new System.Drawing.Size(57, 30);
+            this.txt_Year.TabIndex = 8;
+            this.txt_Year.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // UpdateScheduled
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(592, 579);
+            this.ClientSize = new System.Drawing.Size(563, 547);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btn_Add);
+            this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.panel1);
-            this.Name = "AddSuat";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddSuat";
-            this.Load += new System.EventHandler(this.AddSuat_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Name = "UpdateScheduled";
+            this.Text = "UpdateScheduled";
+            this.Load += new System.EventHandler(this.UpdateScheduled_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cbx_Schedule;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox start_year;
-        private System.Windows.Forms.TextBox start_month;
-        private System.Windows.Forms.TextBox start_day;
         private System.Windows.Forms.TextBox txt_MovieID;
+        private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.TextBox txt_RoomID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox cbx_Schedule;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txt_Day;
+        private System.Windows.Forms.TextBox txt_Year;
+        private System.Windows.Forms.TextBox txt_Month;
     }
 }
