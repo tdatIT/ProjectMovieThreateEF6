@@ -85,6 +85,48 @@ namespace LTWin_Last.Controller
 
 		public bool DeleteCustomerUseTrans(Customer cs)
 		{
+			using(var context = new MovieTheaterContext())
+			{
+				using (var trans = context.Database.BeginTransaction())
+				{
+					try
+					{
+						context.Tickets.RemoveRange(context.Tickets.
+							Where(t => t.C_phone_number == cs.C_phone_number));
+						context.Customers.Remove(context.Customers.Find(cs.C_phone_number));
+						context.SaveChanges();
+						trans.Commit();
+					}
+					catch (Exception)
+					{
+						trans.Rollback();
+						return false;
+					}
+				}
+			}
+			return true;
+		}
+		public bool DeleteScheduleTrans(ScheduledMovie sm)
+		{
+			using (var context = new MovieTheaterContext())
+			{
+				using (var trans = context.Database.BeginTransaction())
+				{
+					try
+					{
+						context.Tickets.RemoveRange(context.Tickets.
+							Where(t=>t.ScheduledMovideId ==sm.Id));
+						context.ScheduledMovies.Remove(context.ScheduledMovies.Find(sm.Id));
+						context.SaveChanges();
+						trans.Commit();
+					}
+					catch (Exception)
+					{
+						trans.Rollback();
+						return false;
+					}
+				}
+			}
 			return true;
 		}
 		public List<Employee> GetAllEmployee()
@@ -117,6 +159,100 @@ namespace LTWin_Last.Controller
 				}
 				return lstSeats;
 			}
+		}
+		public IList ThongTinVeBanTrongNgay(DateTime curTime)
+		{
+			using (MovieTheaterContext context = new MovieTheaterContext())
+			{
+				DateTime nextday = curTime.AddDays(1);
+				var dataSchedule = from i in context.ScheduledMovies
+								   join j in context.Movies on i.MovieId equals j.Id
+								   where i.Begindate >= curTime && i.Begindate <= nextday
+								   select new
+								   {
+									   j.Name,
+									   i.Begindate,
+									   i.Id,
+								   } into info
+								   select info;
+
+				var noseat = from i in context.Tickets
+							 group i by i.ScheduledMovideId into scheduleId
+							 select new { scheduleId.Key, countSeats = scheduleId.Count() };
+
+				var data = from u in dataSchedule
+						   join v in noseat on u.Id equals v.Key into snt
+						   from i in snt.DefaultIfEmpty()
+						   select new
+						   {
+							   TenPhim = u.Name,
+							   NgayBatDau = u.Begindate,
+							   MaSuatChieu = u.Id,
+							   SoVe = i.Key == null ? 0 :  i.countSeats
+						   };
+				return data.ToList();
+			};
+
+		}
+		public IList ThongDoanhThuRapTrongThang(DateTime curTime)
+		{
+			using (MovieTheaterContext context = new MovieTheaterContext())
+			{
+				
+
+				var numtickets = from i in context.Tickets
+							 group i by i.ScheduledMovideId into scheduleId
+							 select new { scheduleId.Key, num = scheduleId.Count() };
+
+				var data = from u in numtickets
+						   join v in context.ScheduledMovies on u.Key equals v.Id
+						   join m in context.Movies	on v.MovieId equals m.Id
+						   where v.Begindate.Month == curTime.Month
+						   select new
+						   {
+							  TenPhim = m.Name,
+							  SoVe = u.num,
+							  Tong = u.num *80000,
+							  Thang = v.Begindate.Month
+						   } into table orderby table.SoVe descending
+							select table;
+				return data.ToList();
+			};
+		}
+		public IList PhimXemNhieuTrongNam(DateTime curTime)
+		{
+			using (MovieTheaterContext context = new MovieTheaterContext())
+			{
+
+
+				var numtickets = from i in context.Tickets
+								 group i by i.ScheduledMovideId into scheduleId
+								 select new { scheduleId.Key, num = scheduleId.Count() };
+
+				var data = from u in numtickets
+						   join v in context.ScheduledMovies on u.Key equals v.Id
+						   join m in context.Movies on v.MovieId equals m.Id
+						   where v.Begindate.Year == curTime.Year
+						   select new
+						   {
+							   TenPhim = m.Name,
+							   SoVe = u.num,
+							   Nam = v.Begindate.Year
+						   } into table
+						   orderby table.SoVe descending
+						   select table;
+				return data.ToList();
+			};
+
+		}
+		public IList ThongTinLuongNhanVien(DateTime curTime)
+		{
+			using (MovieTheaterContext context = new MovieTheaterContext())
+			{
+				var  salarytable = context.Employees.Select(t => new { t.Id,  t.Salary }).ToList();
+				return salarytable;
+			};
+
 		}
 	}
 }

@@ -12,11 +12,16 @@ using System.Windows.Forms;
 
 namespace LTWin_Last
 {
+	public delegate void DFuncDate();
     public partial class Analystic : Form
     {
+		//delegate - static variable for pass value to btw diff form
+		public static DFuncDate funcDate;
+		public static DateTime dateRequest;
+		//
 		private WriteFileExcel writefile;
 		private QueryData queryData;
-
+		
         public Analystic()
         {
             InitializeComponent();
@@ -55,7 +60,52 @@ namespace LTWin_Last
 						employeee.Show();
                     }
 					break;
+				case "Xem số lượng vé bán trong ngày":
+					{
+						funcDate = new DFuncDate(LoadThongTinVeBanTrongNgay);
+						DateInput form = new DateInput();
+						form.Show();
+					}
+					break;
+				case "Xem doanh thu của rạp trong trong tháng":
+					{
+						funcDate = new DFuncDate(LoadDoanhThuTrongThang);
+						DateInput form = new DateInput();
+						form.Show();
+					}
+					break;
+				case "Tiền lương phải trả cho nhân viên trong tháng":
+					{
+						funcDate = new DFuncDate(LoadLuongNhanVien);
+						DateInput form = new DateInput();
+						form.Show();
+					}
+					break;
+				case "Top những phim được xem nhiều trong năm":
+					{
+						funcDate = new DFuncDate(LoadPhimTrongNam);
+						DateInput form = new DateInput();
+						form.Show();
+					}
+					break;
+
 			}
         }
-    }
+		private void LoadThongTinVeBanTrongNgay()
+		{
+			dgv_Result.DataSource = queryData.ThongTinVeBanTrongNgay(dateRequest);
+		}
+		private void LoadDoanhThuTrongThang()
+		{
+			dgv_Result.DataSource = queryData.ThongDoanhThuRapTrongThang(dateRequest);
+		}
+		private void LoadLuongNhanVien()
+		{
+			dgv_Result.DataSource = queryData.ThongTinLuongNhanVien(dateRequest);
+		}
+		private void LoadPhimTrongNam()
+		{
+			dgv_Result.DataSource = queryData.PhimXemNhieuTrongNam(dateRequest);
+		}
+	}
 }

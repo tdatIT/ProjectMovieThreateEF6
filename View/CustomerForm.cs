@@ -1,4 +1,5 @@
-﻿using LTWin_Last.View;
+﻿using LTWin_Last.Controller;
+using LTWin_Last.View;
 using Project_LT_Windows_EF6.Model;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace LTWin_Last
 {
     public partial class CustomerForm : Form
     {
+		
         public static int request ;
         private Customer customerselect;
 
@@ -66,20 +68,24 @@ namespace LTWin_Last
         }
         private void ShowDataCustomer()
         {
-            txt_CPhoneNumber.Text = customerselect.C_phone_number;
-            txt_Name.Text = customerselect.Name;
-            txt_Day.Text = customerselect.Birthday.Value.Day.ToString();
-            txt_Month.Text = customerselect.Birthday.Value.Month.ToString();
-            txt_Year.Text = customerselect.Birthday.Value.Year.ToString();
-            if (customerselect.Sex)
-            {
-                btn_Male.Checked = true;
-            }
-            else
-            {
-                btn_Female.Checked = true;
-            }
+			if(customerselect != null)
+			{
+				txt_CPhoneNumber.Text = customerselect.C_phone_number;
+				txt_Name.Text = customerselect.Name;
+				txt_Day.Text = customerselect.Birthday.Value.Day.ToString();
+				txt_Month.Text = customerselect.Birthday.Value.Month.ToString();
+				txt_Year.Text = customerselect.Birthday.Value.Year.ToString();
+				if (customerselect.Sex)
+				{
+					btn_Male.Checked = true;
+				}
+				else
+				{
+					btn_Female.Checked = true;
+				}
+			}
         }
+
         private bool ConfirmRequestByUser()
         {
             DialogResult cnfrm = MessageBox.Show("Bạn có chắc thay đổi dữ liệu", "Xác nhận",
@@ -96,8 +102,6 @@ namespace LTWin_Last
             request = 1;
             Enable_save_cancel();
         }
-
-     
 
         private void save(object sender, EventArgs e)
         {
@@ -138,7 +142,25 @@ namespace LTWin_Last
                 break;
                 case 2:
                     {
-                        lb_tb.Text = "Thông báo";
+						if (customerselect == null)
+						{
+							MessageBox.Show("Tìm khách hàng cần xóa !!!", "Thất bại", 
+								MessageBoxButtons.OK, MessageBoxIcon.Error);
+						}
+						else {
+							QueryData query = new QueryData();
+							if (query.DeleteCustomerUseTrans(customerselect))
+							{
+								MessageBox.Show("Xóa thành công", "Thông báo",
+									MessageBoxButtons.OK, MessageBoxIcon.Question);
+								
+							}
+							else
+								MessageBox.Show("Xóa Thất bại", "Thông báo",
+									MessageBoxButtons.OK, MessageBoxIcon.Error);
+							lb_tb.Text = "Thông báo";
+						}
+						
                     }
                     break;
             }
@@ -181,7 +203,6 @@ namespace LTWin_Last
             request = 2;
             Enable_save_cancel();
             lb_tb.Text = " Nhấp lưu để xác nhận xóa ";
-
         }
     }
 }

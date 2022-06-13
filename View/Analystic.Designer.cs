@@ -83,7 +83,7 @@ namespace LTWin_Last
 			this.btn_export.Font = new System.Drawing.Font("Be Vietnam Pro SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_export.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.btn_export.Location = new System.Drawing.Point(394, 464);
-			this.btn_export.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btn_export.Margin = new System.Windows.Forms.Padding(2);
 			this.btn_export.Name = "btn_export";
 			this.btn_export.Size = new System.Drawing.Size(127, 37);
 			this.btn_export.TabIndex = 50;
@@ -131,7 +131,11 @@ namespace LTWin_Last
 			this.cbx_Func.Font = new System.Drawing.Font("Be Vietnam Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbx_Func.FormattingEnabled = true;
 			this.cbx_Func.Items.AddRange(new object[] {
-            "Quản lý nhân viên"});
+            "Quản lý nhân viên",
+            "Xem số lượng vé bán trong ngày",
+            "Xem doanh thu của rạp trong trong tháng",
+            "Top những phim được xem nhiều trong năm",
+            "Tiền lương phải trả cho nhân viên trong tháng"});
 			this.cbx_Func.Location = new System.Drawing.Point(308, 16);
 			this.cbx_Func.Name = "cbx_Func";
 			this.cbx_Func.Size = new System.Drawing.Size(349, 27);
@@ -159,13 +163,13 @@ namespace LTWin_Last
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(25)))), ((int)(((byte)(46)))));
-			this.ClientSize = new System.Drawing.Size(886, 609);
+			this.ClientSize = new System.Drawing.Size(886, 551);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.btn_export);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "Analystic";
 			this.Text = "ANALYTIC";
 			this.Load += new System.EventHandler(this.Analystic_Load);
