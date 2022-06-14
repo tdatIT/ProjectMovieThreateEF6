@@ -36,7 +36,7 @@ namespace Project_LT_Windows_EF6.Model
 		{
 
 		}
-		//Define relationship one - to - many (Customer - Ticket)
+		//Define relationship one - to - one (Customer - Ticket)
 		public Customer customer { get; set; }
 		//Define relationship one - to - many (ScheduledMovie - Ticket)
 		public ScheduledMovie scheduledMovie { get; set; }

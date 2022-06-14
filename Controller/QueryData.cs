@@ -249,7 +249,7 @@ namespace LTWin_Last.Controller
 		{
 			using (MovieTheaterContext context = new MovieTheaterContext())
 			{
-				var  salarytable = context.Employees.Select(t => new { t.Id,  t.Salary }).ToList();
+				var  salarytable = context.Employees.Select(t => new { t.Id,t.Name, t.Salary }).ToList();
 				return salarytable;
 			};
 
